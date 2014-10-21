@@ -1,0 +1,219 @@
+ALEPH16 Entropy Tests
+-------------------
+1) Seed = "something very silly"
+--------------------------------
+
+>ent -b ALEPH16.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 0.63, and randomly
+would exceed this value 42.59 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.141200253 (error 0.01 percent).
+Serial correlation coefficient is 0.000019 (totally uncorrelated = 0.0).
+
+
+>ent ALEPH16.32
+Entropy = 7.999997 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 295.71, and randomly
+would exceed this value 4.06 percent of the times.
+
+Arithmetic mean value of data bytes is 127.4921 (127.5 = random).
+Monte Carlo value for Pi is 3.141200253 (error 0.01 percent).
+Serial correlation coefficient is 0.000073 (totally uncorrelated = 0.0).
+
+
+
+2) Seed = "FSBiaccenRI"
+-----------------------
+
+>ent -b ALEPH16.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 0.19, and randomly
+would exceed this value 66.32 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.141452738 (error 0.00 percent).
+Serial correlation coefficient is -0.000034 (totally uncorrelated = 0.0).
+
+
+>ent ALEPH16.32
+Entropy = 7.999998 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 225.78, and randomly
+would exceed this value 90.61 percent of the times.
+
+Arithmetic mean value of data bytes is 127.5068 (127.5 = random).
+Monte Carlo value for Pi is 3.141452738 (error 0.00 percent).
+Serial correlation coefficient is -0.000049 (totally uncorrelated = 0.0).
+
+
+
+3) Seed = "BOte-swaine."
+------------------------
+
+>ent -b ALEPH16.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 0.06, and randomly
+would exceed this value 81.21 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.140648791 (error 0.03 percent).
+Serial correlation coefficient is 0.000008 (totally uncorrelated = 0.0).
+
+
+>ent ALEPH16.32
+Entropy = 7.999998 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 225.92, and randomly
+would exceed this value 90.49 percent of the times.
+
+Arithmetic mean value of data bytes is 127.5123 (127.5 = random).
+Monte Carlo value for Pi is 3.140648791 (error 0.03 percent).
+Serial correlation coefficient is 0.000139 (totally uncorrelated = 0.0).
+
+
+
+4) Seed = "Heere Master: What cheere?"
+--------------------------------------
+
+>ent -b ALEPH16.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 0.65, and randomly
+would exceed this value 41.87 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.142908641 (error 0.04 percent).
+Serial correlation coefficient is 0.000011 (totally uncorrelated = 0.0).
+
+
+>ent ALEPH16.32
+Entropy = 7.999997 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 249.46, and randomly
+would exceed this value 58.61 percent of the times.
+
+Arithmetic mean value of data bytes is 127.4869 (127.5 = random).
+Monte Carlo value for Pi is 3.142908641 (error 0.04 percent).
+Serial correlation coefficient is -0.000064 (totally uncorrelated = 0.0).
+
+
+
+Sanity checks: ISAAC, KISS & CONG
+---------------------------------
+
+>ent -b ISAAC.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 0.01, and randomly
+would exceed this value 92.70 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.142023870 (error 0.01 percent).
+Serial correlation coefficient is 0.000007 (totally uncorrelated = 0.0).
+
+
+E:\Program\C\test\RNG\MOTE\Tests\Ent>ent ISAAC.32
+Entropy = 7.999998 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 232.17, and randomly
+would exceed this value 84.45 percent of the times.
+
+Arithmetic mean value of data bytes is 127.4998 (127.5 = random).
+Monte Carlo value for Pi is 3.142023870 (error 0.01 percent).
+Serial correlation coefficient is -0.000139 (totally uncorrelated = 0.0).
+
+
+
+
+>ent -b KISS.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 0.91, and randomly
+would exceed this value 33.96 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.141282150 (error 0.01 percent).
+Serial correlation coefficient is -0.000013 (totally uncorrelated = 0.0).
+
+
+E:\Program\C\test\RNG\MOTE\Tests\Ent>ent KISS.32
+Entropy = 7.999997 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 267.18, and randomly
+would exceed this value 28.77 percent of the times.
+
+Arithmetic mean value of data bytes is 127.5104 (127.5 = random).
+Monte Carlo value for Pi is 3.141282150 (error 0.01 percent).
+Serial correlation coefficient is 0.000064 (totally uncorrelated = 0.0).
+
+
+
+
+>ent -b CONG.32
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 536870912 bit file by 0 percent.
+
+Chi square distribution for 536870912 samples is 1.14, and randomly
+would exceed this value 28.55 percent of the times.
+
+Arithmetic mean value of data bits is 0.5000 (0.5 = random).
+Monte Carlo value for Pi is 3.142020294 (error 0.01 percent).
+Serial correlation coefficient is -0.000010 (totally uncorrelated = 0.0).
+
+
+E:\Program\C\test\RNG\MOTE\Tests\Ent>ent CONG.32
+Entropy = 7.999999 bits per byte.
+
+Optimum compression would reduce the size
+of this 67108864 byte file by 0 percent.
+
+Chi square distribution for 67108864 samples is 67.23, and randomly
+would exceed this value more than than 99.99 percent of the times.
+
+Arithmetic mean value of data bytes is 127.4944 (127.5 = random).
+Monte Carlo value for Pi is 3.142020294 (error 0.01 percent).
+Serial correlation coefficient is -0.000034 (totally uncorrelated = 0.0).

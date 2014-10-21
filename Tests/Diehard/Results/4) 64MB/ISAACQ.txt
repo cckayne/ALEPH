@@ -1,0 +1,333 @@
+ BIRTHDAY SPACINGS TEST, M= 512 N=2**24 LAMBDA=  2.0000
+           ISAAC.32        using bits  1 to 24 p-value=  .082677
+           ISAAC.32        using bits  2 to 25 p-value=  .976660
+           ISAAC.32        using bits  3 to 26 p-value=  .098407
+           ISAAC.32        using bits  4 to 27 p-value=  .740159
+           ISAAC.32        using bits  5 to 28 p-value=  .119230
+           ISAAC.32        using bits  6 to 29 p-value=  .417181
+           ISAAC.32        using bits  7 to 30 p-value=  .700171
+           ISAAC.32        using bits  8 to 31 p-value=  .820146
+           ISAAC.32        using bits  9 to 32 p-value=  .240098
+   The 9 p-values were
+        .082677   .976660   .098407   .740159   .119230
+        .417181   .700171   .820146   .240098
+  A KSTEST for the 9 p-values yields  .283675
+--------------------------------------------------------------------------------
+           OPERM5 test for file ISAAC.32       
+ chisquare for 99 degrees of freedom= 50.760; p-value= .000016
+           OPERM5 test for file ISAAC.32       
+ chisquare for 99 degrees of freedom=111.940; p-value= .823710
+--------------------------------------------------------------------------------
+    Binary rank test for ISAAC.32       
+         Rank test for 31x31 binary matrices:
+        rows from leftmost 31 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        28       216     211.4   .099304     .099
+        29      5212    5134.0  1.184727    1.284
+        30     23065   23103.0   .062657    1.347
+        31     11507   11551.5   .171616    1.518
+  chisquare= 1.518 for 3 d. of f.; p-value= .430886
+    Binary rank test for ISAAC.32       
+         Rank test for 32x32 binary matrices:
+        rows from leftmost 32 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        29       197     211.4   .983261     .983
+        30      5205    5134.0   .981600    1.965
+        31     23112   23103.0   .003470    1.968
+        32     11486   11551.5   .371678    2.340
+  chisquare= 2.340 for 3 d. of f.; p-value= .558145
+--------------------------------------------------------------------------------
+ b-rank test for bits  1 to  8 p=1-exp(-SUM/2)= .72546
+ b-rank test for bits  2 to  9 p=1-exp(-SUM/2)= .99081
+ b-rank test for bits  3 to 10 p=1-exp(-SUM/2)= .38944
+ b-rank test for bits  4 to 11 p=1-exp(-SUM/2)= .84520
+ b-rank test for bits  5 to 12 p=1-exp(-SUM/2)= .47802
+ b-rank test for bits  6 to 13 p=1-exp(-SUM/2)= .53724
+ b-rank test for bits  7 to 14 p=1-exp(-SUM/2)= .03220
+ b-rank test for bits  8 to 15 p=1-exp(-SUM/2)= .83805
+ b-rank test for bits  9 to 16 p=1-exp(-SUM/2)= .01538
+ b-rank test for bits 10 to 17 p=1-exp(-SUM/2)= .79257
+ b-rank test for bits 11 to 18 p=1-exp(-SUM/2)= .95819
+ b-rank test for bits 12 to 19 p=1-exp(-SUM/2)= .04124
+ b-rank test for bits 13 to 20 p=1-exp(-SUM/2)= .58604
+ b-rank test for bits 14 to 21 p=1-exp(-SUM/2)= .20848
+ b-rank test for bits 15 to 22 p=1-exp(-SUM/2)= .75559
+ b-rank test for bits 16 to 23 p=1-exp(-SUM/2)= .31630
+ b-rank test for bits 17 to 24 p=1-exp(-SUM/2)= .00107
+ b-rank test for bits 18 to 25 p=1-exp(-SUM/2)= .66247
+ b-rank test for bits 19 to 26 p=1-exp(-SUM/2)= .23880
+ b-rank test for bits 20 to 27 p=1-exp(-SUM/2)= .06391
+ b-rank test for bits 21 to 28 p=1-exp(-SUM/2)= .58967
+ b-rank test for bits 22 to 29 p=1-exp(-SUM/2)= .25696
+ b-rank test for bits 23 to 30 p=1-exp(-SUM/2)= .67464
+ b-rank test for bits 24 to 31 p=1-exp(-SUM/2)= .20786
+ b-rank test for bits 25 to 32 p=1-exp(-SUM/2)= .65594
+   TEST SUMMARY, 25 tests on 100,000 random 6x8 matrices
+ These should be 25 uniform [0,1] random variables:
+     .725458     .990809     .389443     .845197     .478023
+     .537238     .032200     .838046     .015384     .792572
+     .958189     .041242     .586042     .208480     .755593
+     .316302     .001074     .662468     .238804     .063906
+     .589671     .256957     .674644     .207857     .655944
+   brank test summary for ISAAC.32       
+       The KS test for those 25 supposed UNI's yields
+                    KS p-value= .497513
+--------------------------------------------------------------------------------
+  No. missing words should average  141909. with sigma=428.
+ tst no  1:  141901 missing words,    -.02 sigmas from mean, p-value= .49224
+ tst no  2:  141842 missing words,    -.16 sigmas from mean, p-value= .43750
+ tst no  3:  142050 missing words,     .33 sigmas from mean, p-value= .62880
+ tst no  4:  141666 missing words,    -.57 sigmas from mean, p-value= .28484
+ tst no  5:  142438 missing words,    1.24 sigmas from mean, p-value= .89162
+ tst no  6:  141759 missing words,    -.35 sigmas from mean, p-value= .36271
+ tst no  7:  141805 missing words,    -.24 sigmas from mean, p-value= .40371
+ tst no  8:  141037 missing words,   -2.04 sigmas from mean, p-value= .02077
+ tst no  9:  141846 missing words,    -.15 sigmas from mean, p-value= .44119
+ tst no 10:  142068 missing words,     .37 sigmas from mean, p-value= .64458
+ tst no 11:  142560 missing words,    1.52 sigmas from mean, p-value= .93578
+ tst no 12:  142485 missing words,    1.35 sigmas from mean, p-value= .91069
+ tst no 13:  141351 missing words,   -1.30 sigmas from mean, p-value= .09603
+ tst no 14:  142366 missing words,    1.07 sigmas from mean, p-value= .85701
+ tst no 15:  141452 missing words,   -1.07 sigmas from mean, p-value= .14264
+ tst no 16:  142810 missing words,    2.10 sigmas from mean, p-value= .98233
+ tst no 17:  142150 missing words,     .56 sigmas from mean, p-value= .71305
+ tst no 18:  142215 missing words,     .71 sigmas from mean, p-value= .76244
+ tst no 19:  142305 missing words,     .92 sigmas from mean, p-value= .82238
+ tst no 20:  142001 missing words,     .21 sigmas from mean, p-value= .58480
+--------------------------------------------------------------------------------
+    OPSO for ISAAC.32        using bits 23 to 32        142125   .744  .7715
+    OPSO for ISAAC.32        using bits 22 to 31        142276  1.264  .8970
+    OPSO for ISAAC.32        using bits 21 to 30        141934   .085  .5339
+    OPSO for ISAAC.32        using bits 20 to 29        141569 -1.174  .1203
+    OPSO for ISAAC.32        using bits 19 to 28        141899  -.036  .4858
+    OPSO for ISAAC.32        using bits 18 to 27        142074   .568  .7149
+    OPSO for ISAAC.32        using bits 17 to 26        141905  -.015  .4940
+    OPSO for ISAAC.32        using bits 16 to 25        141925   .054  .5215
+    OPSO for ISAAC.32        using bits 15 to 24        141817  -.318  .3751
+    OPSO for ISAAC.32        using bits 14 to 23        142214  1.051  .8533
+    OPSO for ISAAC.32        using bits 13 to 22        141719  -.656  .2558
+    OPSO for ISAAC.32        using bits 12 to 21        141295 -2.118  .0171
+    OPSO for ISAAC.32        using bits 11 to 20        141757  -.525  .2997
+    OPSO for ISAAC.32        using bits 10 to 19        141918   .030  .5119
+    OPSO for ISAAC.32        using bits  9 to 18        142443  1.840  .9671
+    OPSO for ISAAC.32        using bits  8 to 17        141385 -1.808  .0353
+    OPSO for ISAAC.32        using bits  7 to 16        141639  -.932  .1756
+    OPSO for ISAAC.32        using bits  6 to 15        141283 -2.160  .0154
+    OPSO for ISAAC.32        using bits  5 to 14        141381 -1.822  .0342
+    OPSO for ISAAC.32        using bits  4 to 13        141933   .082  .5325
+    OPSO for ISAAC.32        using bits  3 to 12        141917   .026  .5106
+    OPSO for ISAAC.32        using bits  2 to 11        141975   .226  .5896
+    OPSO for ISAAC.32        using bits  1 to 10        142007   .337  .6319
+    OQSO for ISAAC.32        using bits 28 to 32        141591 -1.079  .1403
+    OQSO for ISAAC.32        using bits 27 to 31        141976   .226  .5894
+    OQSO for ISAAC.32        using bits 26 to 30        142399  1.660  .9515
+    OQSO for ISAAC.32        using bits 25 to 29        142197   .975  .8353
+    OQSO for ISAAC.32        using bits 24 to 28        142202   .992  .8394
+    OQSO for ISAAC.32        using bits 23 to 27        142330  1.426  .9231
+    OQSO for ISAAC.32        using bits 22 to 26        141459 -1.527  .0634
+    OQSO for ISAAC.32        using bits 21 to 25        141806  -.350  .3631
+    OQSO for ISAAC.32        using bits 20 to 24        142192   .958  .8310
+    OQSO for ISAAC.32        using bits 19 to 23        142293  1.301  .9033
+    OQSO for ISAAC.32        using bits 18 to 22        141975   .223  .5881
+    OQSO for ISAAC.32        using bits 17 to 21        141136 -2.621  .0044
+    OQSO for ISAAC.32        using bits 16 to 20        141825  -.286  .3875
+    OQSO for ISAAC.32        using bits 15 to 19        141877  -.110  .4564
+    OQSO for ISAAC.32        using bits 14 to 18        141601 -1.045  .1480
+    OQSO for ISAAC.32        using bits 13 to 17        142281  1.260  .8961
+    OQSO for ISAAC.32        using bits 12 to 16        142635  2.460  .9931
+    OQSO for ISAAC.32        using bits 11 to 15        141720  -.642  .2605
+    OQSO for ISAAC.32        using bits 10 to 14        142226  1.073  .8585
+    OQSO for ISAAC.32        using bits  9 to 13        142124   .728  .7666
+    OQSO for ISAAC.32        using bits  8 to 12        141956   .158  .5629
+    OQSO for ISAAC.32        using bits  7 to 11        142346  1.480  .9306
+    OQSO for ISAAC.32        using bits  6 to 10        141974   .219  .5868
+    OQSO for ISAAC.32        using bits  5 to  9        142452  1.840  .9671
+    OQSO for ISAAC.32        using bits  4 to  8        141848  -.208  .4177
+    OQSO for ISAAC.32        using bits  3 to  7        141700  -.710  .2390
+    OQSO for ISAAC.32        using bits  2 to  6        141513 -1.343  .0896
+    OQSO for ISAAC.32        using bits  1 to  5        141579 -1.120  .1314
+     DNA for ISAAC.32        using bits 31 to 32        142117   .613  .7299
+     DNA for ISAAC.32        using bits 30 to 31        142161   .742  .7711
+     DNA for ISAAC.32        using bits 29 to 30        141553 -1.051  .1466
+     DNA for ISAAC.32        using bits 28 to 29        141793  -.343  .3657
+     DNA for ISAAC.32        using bits 27 to 28        141903  -.019  .4926
+     DNA for ISAAC.32        using bits 26 to 27        141893  -.048  .4808
+     DNA for ISAAC.32        using bits 25 to 26        141255 -1.930  .0268
+     DNA for ISAAC.32        using bits 24 to 25        141590  -.942  .1731
+     DNA for ISAAC.32        using bits 23 to 24        142435  1.551  .9395
+     DNA for ISAAC.32        using bits 22 to 23        142520  1.801  .9642
+     DNA for ISAAC.32        using bits 21 to 22        141946   .108  .5431
+     DNA for ISAAC.32        using bits 20 to 21        141584  -.960  .1686
+     DNA for ISAAC.32        using bits 19 to 20        142147   .701  .7584
+     DNA for ISAAC.32        using bits 18 to 19        141846  -.187  .4259
+     DNA for ISAAC.32        using bits 17 to 18        142717  2.383  .9914
+     DNA for ISAAC.32        using bits 16 to 17        141942   .096  .5384
+     DNA for ISAAC.32        using bits 15 to 16        141436 -1.396  .0813
+     DNA for ISAAC.32        using bits 14 to 15        141996   .256  .6009
+     DNA for ISAAC.32        using bits 13 to 14        142210   .887  .8124
+     DNA for ISAAC.32        using bits 12 to 13        142062   .450  .6738
+     DNA for ISAAC.32        using bits 11 to 12        141324 -1.727  .0421
+     DNA for ISAAC.32        using bits 10 to 11        142257  1.026  .8475
+     DNA for ISAAC.32        using bits  9 to 10        141620  -.853  .1967
+     DNA for ISAAC.32        using bits  8 to  9        142170   .769  .7790
+     DNA for ISAAC.32        using bits  7 to  8        141928   .055  .5220
+     DNA for ISAAC.32        using bits  6 to  7        142127   .642  .7396
+     DNA for ISAAC.32        using bits  5 to  6        141861  -.143  .4433
+     DNA for ISAAC.32        using bits  4 to  5        142017   .318  .6246
+     DNA for ISAAC.32        using bits  3 to  4        141809  -.296  .3836
+     DNA for ISAAC.32        using bits  2 to  3        142155   .725  .7657
+     DNA for ISAAC.32        using bits  1 to  2        141576  -.983  .1627
+--------------------------------------------------------------------------------
+   Test results for ISAAC.32       
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size:2560000
+                               chisquare  equiv normal  p-value
+  Results fo COUNT-THE-1's in successive bytes:
+ byte stream for ISAAC.32         2353.98     -2.065      .019459
+ byte stream for ISAAC.32         2555.82       .789      .785058
+--------------------------------------------------------------------------------
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size: 256000
+                      chisquare  equiv normal  p value
+  Results for COUNT-THE-1's in specified bytes:
+           bits  1 to  8  2423.70     -1.079      .140280
+           bits  2 to  9  2426.44     -1.040      .149089
+           bits  3 to 10  2507.58       .107      .542703
+           bits  4 to 11  2628.75      1.821      .965681
+           bits  5 to 12  2650.92      2.134      .983592
+           bits  6 to 13  2421.28     -1.113      .132803
+           bits  7 to 14  2434.80      -.922      .178264
+           bits  8 to 15  2544.31       .627      .734531
+           bits  9 to 16  2578.92      1.116      .867797
+           bits 10 to 17  2550.02       .707      .760354
+           bits 11 to 18  2478.29      -.307      .379417
+           bits 12 to 19  2466.96      -.467      .320151
+           bits 13 to 20  2615.18      1.629      .948328
+           bits 14 to 21  2480.55      -.275      .391642
+           bits 15 to 22  2517.26       .244      .596443
+           bits 16 to 23  2469.57      -.430      .333478
+           bits 17 to 24  2553.41       .755      .774983
+           bits 18 to 25  2447.05      -.749      .226964
+           bits 19 to 26  2370.17     -1.836      .033177
+           bits 20 to 27  2471.20      -.407      .341904
+           bits 21 to 28  2539.65       .561      .712497
+           bits 22 to 29  2531.52       .446      .672092
+           bits 23 to 30  2499.47      -.008      .496999
+           bits 24 to 31  2597.49      1.379      .915999
+           bits 25 to 32  2642.06      2.009      .977733
+--------------------------------------------------------------------------------
+           CDPARK: result of ten tests on file ISAAC.32       
+            Of 12,000 tries, the average no. of successes
+                 should be 3523 with sigma=21.9
+            Successes: 3565    z-score:  1.918 p-value: .972432
+            Successes: 3548    z-score:  1.142 p-value: .873180
+            Successes: 3527    z-score:   .183 p-value: .572463
+            Successes: 3517    z-score:  -.274 p-value: .392053
+            Successes: 3510    z-score:  -.594 p-value: .276387
+            Successes: 3521    z-score:  -.091 p-value: .463618
+            Successes: 3522    z-score:  -.046 p-value: .481790
+            Successes: 3477    z-score: -2.100 p-value: .017844
+            Successes: 3577    z-score:  2.466 p-value: .993164
+            Successes: 3487    z-score: -1.644 p-value: .050105
+ 
+           square size   avg. no.  parked   sample sigma
+             100.            3525.100       29.833
+            KSTEST for the above 10: p=  .531274
+--------------------------------------------------------------------------------
+               This is the MINIMUM DISTANCE test
+              for random integers in the file ISAAC.32       
+     Sample no.    d^2     avg     equiv uni            
+           5     .1741    .3678     .160499
+          10    1.2756    .6456     .722516
+          15    3.1728    .8535     .958775
+          20     .2869    .8822     .250485
+          25     .0051    .7796     .005161
+          30     .1505    .8252     .140388
+          35    1.1242    .8602     .676906
+          40     .6106    .8717     .458654
+          45     .5669    .9187     .434340
+          50     .4930    .9337     .390708
+          55    3.2581   1.0659     .962162
+          60     .0606   1.0617     .059040
+          65    1.3834   1.0445     .751016
+          70     .1299   1.0037     .122417
+          75     .7845    .9944     .545455
+          80     .8678    .9989     .581941
+          85     .2383    .9711     .213014
+          90     .4432    .9771     .359466
+          95     .0498    .9769     .048801
+         100     .9018    .9772     .596015
+     MINIMUM DISTANCE TEST for ISAAC.32       
+          Result of KS test on 20 transformed mindist^2's:
+                                  p-value= .156758
+--------------------------------------------------------------------------------
+               The 3DSPHERES test for file ISAAC.32       
+ sample no:  1     r^3=  52.075     p-value= .82375
+ sample no:  2     r^3=  14.385     p-value= .38090
+ sample no:  3     r^3=  18.296     p-value= .45657
+ sample no:  4     r^3=   6.225     p-value= .18740
+ sample no:  5     r^3=   3.853     p-value= .12052
+ sample no:  6     r^3=   5.448     p-value= .16606
+ sample no:  7     r^3=  15.461     p-value= .40271
+ sample no:  8     r^3=  18.690     p-value= .46367
+ sample no:  9     r^3=  14.602     p-value= .38537
+ sample no: 10     r^3=   7.837     p-value= .22990
+ sample no: 11     r^3=  14.187     p-value= .37680
+ sample no: 12     r^3=  35.127     p-value= .68991
+ sample no: 13     r^3=  26.821     p-value= .59100
+ sample no: 14     r^3=   7.948     p-value= .23274
+ sample no: 15     r^3=   1.484     p-value= .04826
+ sample no: 16     r^3=  79.490     p-value= .92932
+ sample no: 17     r^3=  75.493     p-value= .91925
+ sample no: 18     r^3=  21.088     p-value= .50487
+ sample no: 19     r^3=  29.903     p-value= .63092
+ sample no: 20     r^3=  28.503     p-value= .61329
+       3DSPHERES test for file ISAAC.32             p-value= .360355
+--------------------------------------------------------------------------------
+            RESULTS OF SQUEEZE TEST FOR ISAAC.32       
+         Table of standardized frequency counts
+     ( (obs-exp)/sqrt(exp) )^2
+        for j taking values <=6,7,8,...,47,>=48:
+     -.1      .9    -1.1    -2.2      .2     -.4
+    -2.4      .8    -1.0     -.1     -.7     -.9
+      .2      .2     -.8      .0     1.5      .3
+     1.7     -.8    -2.3    -1.7     1.8     1.1
+      .7     -.1     1.7      .0     1.1    -1.1
+      .6     -.3     -.9     -.1     -.8     2.0
+      .0     -.4     1.3     1.0     -.6     2.0
+      .8
+           Chi-square with 42 degrees of freedom: 54.289
+              z-score=  1.341  p-value= .903307
+______________________________________________________________
+--------------------------------------------------------------------------------
+                Test no.  1      p-value  .776942
+                Test no.  2      p-value  .089509
+                Test no.  3      p-value  .341964
+                Test no.  4      p-value  .464701
+                Test no.  5      p-value  .742423
+                Test no.  6      p-value  .279582
+                Test no.  7      p-value  .284115
+                Test no.  8      p-value  .072014
+                Test no.  9      p-value  .519897
+                Test no. 10      p-value  .044362
+   Results of the OSUM test for ISAAC.32       
+        KSTEST on the above 10 p-values:  .786847
+--------------------------------------------------------------------------------
+           The RUNS test for file ISAAC.32       
+     Up and down runs in a sample of 10000
+_________________________________________________ 
+                 Run test for ISAAC.32       :
+       runs up; ks test for 10 p's: .439776
+     runs down; ks test for 10 p's: .854092
+                 Run test for ISAAC.32       :
+       runs up; ks test for 10 p's: .313682
+     runs down; ks test for 10 p's: .830327
+--------------------------------------------------------------------------------
+                Results of craps test for ISAAC.32       
+  No. of wins:  Observed Expected
+                                98682    98585.86
+ Chisq=  16.73 for 20 degrees of freedom, p=  .32959
+               Throws Observed Expected  Chisq     Sum
+            SUMMARY  FOR ISAAC.32       
+                p-value for no. of wins: .666401
+                p-value for throws/game: .329585
+  Test completed.  File ISAAC.32       
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

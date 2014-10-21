@@ -1,0 +1,333 @@
+ BIRTHDAY SPACINGS TEST, M= 512 N=2**24 LAMBDA=  2.0000
+           AUM32.32        using bits  1 to 24 p-value=  .374819
+           AUM32.32        using bits  2 to 25 p-value=  .567961
+           AUM32.32        using bits  3 to 26 p-value=  .182923
+           AUM32.32        using bits  4 to 27 p-value=  .937084
+           AUM32.32        using bits  5 to 28 p-value=  .706185
+           AUM32.32        using bits  6 to 29 p-value=  .914260
+           AUM32.32        using bits  7 to 30 p-value=  .018021
+           AUM32.32        using bits  8 to 31 p-value=  .425338
+           AUM32.32        using bits  9 to 32 p-value=  .593061
+   The 9 p-values were
+        .374819   .567961   .182923   .937084   .706185
+        .914260   .018021   .425338   .593061
+  A KSTEST for the 9 p-values yields  .043158
+--------------------------------------------------------------------------------
+           OPERM5 test for file AUM32.32       
+ chisquare for 99 degrees of freedom=132.025; p-value= .985112
+           OPERM5 test for file AUM32.32       
+ chisquare for 99 degrees of freedom= 91.742; p-value= .315063
+--------------------------------------------------------------------------------
+    Binary rank test for AUM32.32       
+         Rank test for 31x31 binary matrices:
+        rows from leftmost 31 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        28       179     211.4  4.970852    4.971
+        29      5108    5134.0   .131775    5.103
+        30     23381   23103.0  3.344059    8.447
+        31     11332   11551.5  4.171828   12.619
+  chisquare=12.619 for 3 d. of f.; p-value= .994652
+    Binary rank test for AUM32.32       
+         Rank test for 32x32 binary matrices:
+        rows from leftmost 32 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        29       196     211.4  1.124385    1.124
+        30      5168    5134.0   .225029    1.349
+        31     23063   23103.0   .069417    1.419
+        32     11573   11551.5   .039926    1.459
+  chisquare= 1.459 for 3 d. of f.; p-value= .421743
+--------------------------------------------------------------------------------
+ b-rank test for bits  1 to  8 p=1-exp(-SUM/2)= .27306
+ b-rank test for bits  2 to  9 p=1-exp(-SUM/2)= .30950
+ b-rank test for bits  3 to 10 p=1-exp(-SUM/2)= .67517
+ b-rank test for bits  4 to 11 p=1-exp(-SUM/2)= .49548
+ b-rank test for bits  5 to 12 p=1-exp(-SUM/2)= .08318
+ b-rank test for bits  6 to 13 p=1-exp(-SUM/2)= .01808
+ b-rank test for bits  7 to 14 p=1-exp(-SUM/2)= .29264
+ b-rank test for bits  8 to 15 p=1-exp(-SUM/2)= .48881
+ b-rank test for bits  9 to 16 p=1-exp(-SUM/2)= .47917
+ b-rank test for bits 10 to 17 p=1-exp(-SUM/2)= .92575
+ b-rank test for bits 11 to 18 p=1-exp(-SUM/2)= .51892
+ b-rank test for bits 12 to 19 p=1-exp(-SUM/2)= .02691
+ b-rank test for bits 13 to 20 p=1-exp(-SUM/2)= .65725
+ b-rank test for bits 14 to 21 p=1-exp(-SUM/2)= .56612
+ b-rank test for bits 15 to 22 p=1-exp(-SUM/2)= .75864
+ b-rank test for bits 16 to 23 p=1-exp(-SUM/2)= .61607
+ b-rank test for bits 17 to 24 p=1-exp(-SUM/2)= .01095
+ b-rank test for bits 18 to 25 p=1-exp(-SUM/2)= .33111
+ b-rank test for bits 19 to 26 p=1-exp(-SUM/2)= .71757
+ b-rank test for bits 20 to 27 p=1-exp(-SUM/2)= .68490
+ b-rank test for bits 21 to 28 p=1-exp(-SUM/2)= .64908
+ b-rank test for bits 22 to 29 p=1-exp(-SUM/2)= .39463
+ b-rank test for bits 23 to 30 p=1-exp(-SUM/2)= .28485
+ b-rank test for bits 24 to 31 p=1-exp(-SUM/2)= .74344
+ b-rank test for bits 25 to 32 p=1-exp(-SUM/2)= .60838
+   TEST SUMMARY, 25 tests on 100,000 random 6x8 matrices
+ These should be 25 uniform [0,1] random variables:
+     .273061     .309501     .675174     .495482     .083185
+     .018082     .292639     .488810     .479175     .925746
+     .518925     .026911     .657249     .566122     .758642
+     .616069     .010946     .331108     .717570     .684898
+     .649085     .394625     .284847     .743444     .608381
+   brank test summary for AUM32.32       
+       The KS test for those 25 supposed UNI's yields
+                    KS p-value= .701815
+--------------------------------------------------------------------------------
+  No. missing words should average  141909. with sigma=428.
+ tst no  1:  142126 missing words,     .51 sigmas from mean, p-value= .69366
+ tst no  2:  141676 missing words,    -.55 sigmas from mean, p-value= .29282
+ tst no  3:  141852 missing words,    -.13 sigmas from mean, p-value= .44672
+ tst no  4:  141801 missing words,    -.25 sigmas from mean, p-value= .40009
+ tst no  5:  142703 missing words,    1.85 sigmas from mean, p-value= .96816
+ tst no  6:  142274 missing words,     .85 sigmas from mean, p-value= .80290
+ tst no  7:  140946 missing words,   -2.25 sigmas from mean, p-value= .01220
+ tst no  8:  142075 missing words,     .39 sigmas from mean, p-value= .65065
+ tst no  9:  141841 missing words,    -.16 sigmas from mean, p-value= .43658
+ tst no 10:  141527 missing words,    -.89 sigmas from mean, p-value= .18585
+ tst no 11:  141695 missing words,    -.50 sigmas from mean, p-value= .30827
+ tst no 12:  141904 missing words,    -.01 sigmas from mean, p-value= .49503
+ tst no 13:  141900 missing words,    -.02 sigmas from mean, p-value= .49131
+ tst no 14:  142298 missing words,     .91 sigmas from mean, p-value= .81809
+ tst no 15:  142456 missing words,    1.28 sigmas from mean, p-value= .89925
+ tst no 16:  142199 missing words,     .68 sigmas from mean, p-value= .75073
+ tst no 17:  141717 missing words,    -.45 sigmas from mean, p-value= .32658
+ tst no 18:  142121 missing words,     .49 sigmas from mean, p-value= .68954
+ tst no 19:  141688 missing words,    -.52 sigmas from mean, p-value= .30254
+ tst no 20:  142566 missing words,    1.53 sigmas from mean, p-value= .93752
+--------------------------------------------------------------------------------
+    OPSO for AUM32.32        using bits 23 to 32        141426 -1.667  .0478
+    OPSO for AUM32.32        using bits 22 to 31        141996   .299  .6175
+    OPSO for AUM32.32        using bits 21 to 30        142105   .675  .7501
+    OPSO for AUM32.32        using bits 20 to 29        142195   .985  .8377
+    OPSO for AUM32.32        using bits 19 to 28        141674  -.811  .2085
+    OPSO for AUM32.32        using bits 18 to 27        141827  -.284  .3882
+    OPSO for AUM32.32        using bits 17 to 26        141685  -.774  .2196
+    OPSO for AUM32.32        using bits 16 to 25        141633  -.953  .1703
+    OPSO for AUM32.32        using bits 15 to 24        141701  -.718  .2363
+    OPSO for AUM32.32        using bits 14 to 23        141435 -1.636  .0510
+    OPSO for AUM32.32        using bits 13 to 22        141997   .302  .6188
+    OPSO for AUM32.32        using bits 12 to 21        141888  -.074  .4707
+    OPSO for AUM32.32        using bits 11 to 20        141613 -1.022  .1534
+    OPSO for AUM32.32        using bits 10 to 19        141653  -.884  .1884
+    OPSO for AUM32.32        using bits  9 to 18        141773  -.470  .3191
+    OPSO for AUM32.32        using bits  8 to 17        141358 -1.901  .0286
+    OPSO for AUM32.32        using bits  7 to 16        141434 -1.639  .0506
+    OPSO for AUM32.32        using bits  6 to 15        142103   .668  .7479
+    OPSO for AUM32.32        using bits  5 to 14        141382 -1.818  .0345
+    OPSO for AUM32.32        using bits  4 to 13        142012   .354  .6383
+    OPSO for AUM32.32        using bits  3 to 12        141607 -1.043  .1486
+    OPSO for AUM32.32        using bits  2 to 11        141665  -.843  .1998
+    OPSO for AUM32.32        using bits  1 to 10        142021   .385  .6499
+    OQSO for AUM32.32        using bits 28 to 32        141920   .036  .5144
+    OQSO for AUM32.32        using bits 27 to 31        141865  -.150  .4403
+    OQSO for AUM32.32        using bits 26 to 30        142194   .965  .8327
+    OQSO for AUM32.32        using bits 25 to 29        142054   .490  .6881
+    OQSO for AUM32.32        using bits 24 to 28        142099   .643  .7399
+    OQSO for AUM32.32        using bits 23 to 27        141579 -1.120  .1314
+    OQSO for AUM32.32        using bits 22 to 26        141759  -.510  .3052
+    OQSO for AUM32.32        using bits 21 to 25        141748  -.547  .2922
+    OQSO for AUM32.32        using bits 20 to 24        142079   .575  .7174
+    OQSO for AUM32.32        using bits 19 to 23        142363  1.538  .9380
+    OQSO for AUM32.32        using bits 18 to 22        141696  -.723  .2348
+    OQSO for AUM32.32        using bits 17 to 21        142158   .843  .8004
+    OQSO for AUM32.32        using bits 16 to 20        141474 -1.476  .0700
+    OQSO for AUM32.32        using bits 15 to 19        142006   .328  .6284
+    OQSO for AUM32.32        using bits 14 to 18        141768  -.479  .3159
+    OQSO for AUM32.32        using bits 13 to 17        141571 -1.147  .1257
+    OQSO for AUM32.32        using bits 12 to 16        141621  -.977  .1642
+    OQSO for AUM32.32        using bits 11 to 15        141838  -.242  .4045
+    OQSO for AUM32.32        using bits 10 to 14        142285  1.273  .8986
+    OQSO for AUM32.32        using bits  9 to 13        141960   .172  .5682
+    OQSO for AUM32.32        using bits  8 to 12        141819  -.306  .3797
+    OQSO for AUM32.32        using bits  7 to 11        141529 -1.289  .0987
+    OQSO for AUM32.32        using bits  6 to 10        141984   .253  .5999
+    OQSO for AUM32.32        using bits  5 to  9        142157   .840  .7994
+    OQSO for AUM32.32        using bits  4 to  8        141659  -.849  .1981
+    OQSO for AUM32.32        using bits  3 to  7        141862  -.160  .4363
+    OQSO for AUM32.32        using bits  2 to  6        141697  -.720  .2358
+    OQSO for AUM32.32        using bits  1 to  5        142167   .873  .8088
+     DNA for AUM32.32        using bits 31 to 32        142171   .772  .7799
+     DNA for AUM32.32        using bits 30 to 31        141483 -1.258  .1043
+     DNA for AUM32.32        using bits 29 to 30        141542 -1.084  .1393
+     DNA for AUM32.32        using bits 28 to 29        141940   .090  .5360
+     DNA for AUM32.32        using bits 27 to 28        141987   .229  .5906
+     DNA for AUM32.32        using bits 26 to 27        140969 -2.774  .0028
+     DNA for AUM32.32        using bits 25 to 26        141575  -.986  .1620
+     DNA for AUM32.32        using bits 24 to 25        141991   .241  .5952
+     DNA for AUM32.32        using bits 23 to 24        141995   .253  .5998
+     DNA for AUM32.32        using bits 22 to 23        141576  -.983  .1627
+     DNA for AUM32.32        using bits 21 to 22        141961   .152  .5606
+     DNA for AUM32.32        using bits 20 to 21        141513 -1.169  .1212
+     DNA for AUM32.32        using bits 19 to 20        141383 -1.553  .0603
+     DNA for AUM32.32        using bits 18 to 19        142237   .967  .8331
+     DNA for AUM32.32        using bits 17 to 18        141635  -.809  .2092
+     DNA for AUM32.32        using bits 16 to 17        141451 -1.352  .0882
+     DNA for AUM32.32        using bits 15 to 16        142148   .704  .7593
+     DNA for AUM32.32        using bits 14 to 15        141776  -.393  .3470
+     DNA for AUM32.32        using bits 13 to 14        141847  -.184  .4271
+     DNA for AUM32.32        using bits 12 to 13        141874  -.104  .4585
+     DNA for AUM32.32        using bits 11 to 12        142639  2.152  .9843
+     DNA for AUM32.32        using bits 10 to 11        141749  -.473  .3181
+     DNA for AUM32.32        using bits  9 to 10        141534 -1.107  .1341
+     DNA for AUM32.32        using bits  8 to  9        141302 -1.792  .0366
+     DNA for AUM32.32        using bits  7 to  8        142520  1.801  .9642
+     DNA for AUM32.32        using bits  6 to  7        141870  -.116  .4538
+     DNA for AUM32.32        using bits  5 to  6        142026   .344  .6346
+     DNA for AUM32.32        using bits  4 to  5        142114   .604  .7270
+     DNA for AUM32.32        using bits  3 to  4        142527  1.822  .9658
+     DNA for AUM32.32        using bits  2 to  3        142058   .439  .6695
+     DNA for AUM32.32        using bits  1 to  2        141728  -.535  .2964
+--------------------------------------------------------------------------------
+   Test results for AUM32.32       
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size:2560000
+                               chisquare  equiv normal  p-value
+  Results fo COUNT-THE-1's in successive bytes:
+ byte stream for AUM32.32         2499.20      -.011      .495494
+ byte stream for AUM32.32         2551.40       .727      .766371
+--------------------------------------------------------------------------------
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size: 256000
+                      chisquare  equiv normal  p value
+  Results for COUNT-THE-1's in specified bytes:
+           bits  1 to  8  2465.79      -.484      .314270
+           bits  2 to  9  2493.49      -.092      .463312
+           bits  3 to 10  2509.73       .138      .554696
+           bits  4 to 11  2521.50       .304      .619473
+           bits  5 to 12  2476.68      -.330      .370760
+           bits  6 to 13  2347.00     -2.164      .015242
+           bits  7 to 14  2493.55      -.091      .463642
+           bits  8 to 15  2598.72      1.396      .918652
+           bits  9 to 16  2558.26       .824      .795016
+           bits 10 to 17  2439.86      -.850      .197524
+           bits 11 to 18  2561.03       .863      .805952
+           bits 12 to 19  2600.82      1.426      .923030
+           bits 13 to 20  2619.41      1.689      .954356
+           bits 14 to 21  2547.62       .673      .749672
+           bits 15 to 22  2571.23      1.007      .843109
+           bits 16 to 23  2517.14       .242      .595788
+           bits 17 to 24  2461.97      -.538      .295325
+           bits 18 to 25  2597.79      1.383      .916653
+           bits 19 to 26  2498.87      -.016      .493602
+           bits 20 to 27  2565.17       .922      .821651
+           bits 21 to 28  2636.65      1.933      .973355
+           bits 22 to 29  2489.99      -.141      .443740
+           bits 23 to 30  2576.85      1.087      .861447
+           bits 24 to 31  2493.38      -.094      .462700
+           bits 25 to 32  2581.36      1.151      .875063
+--------------------------------------------------------------------------------
+           CDPARK: result of ten tests on file AUM32.32       
+            Of 12,000 tries, the average no. of successes
+                 should be 3523 with sigma=21.9
+            Successes: 3534    z-score:   .502 p-value: .692266
+            Successes: 3531    z-score:   .365 p-value: .642555
+            Successes: 3512    z-score:  -.502 p-value: .307734
+            Successes: 3527    z-score:   .183 p-value: .572463
+            Successes: 3551    z-score:  1.279 p-value: .899470
+            Successes: 3502    z-score:  -.959 p-value: .168804
+            Successes: 3522    z-score:  -.046 p-value: .481790
+            Successes: 3488    z-score: -1.598 p-value: .055002
+            Successes: 3538    z-score:   .685 p-value: .753306
+            Successes: 3557    z-score:  1.553 p-value: .939730
+ 
+           square size   avg. no.  parked   sample sigma
+             100.            3526.200       20.099
+            KSTEST for the above 10: p=  .059985
+--------------------------------------------------------------------------------
+               This is the MINIMUM DISTANCE test
+              for random integers in the file AUM32.32       
+     Sample no.    d^2     avg     equiv uni            
+           5     .1175    .3513     .111429
+          10    1.0574    .5546     .654490
+          15    1.1963    .6885     .699499
+          20     .0192    .8476     .019131
+          25     .4562    .7197     .367748
+          30     .1071    .7031     .102044
+          35    2.3205    .9335     .902915
+          40     .7344    .9191     .521960
+          45    1.0608    .9432     .655646
+          50     .3289    .9036     .281454
+          55    1.0645    .9921     .656947
+          60     .1071   1.0357     .102043
+          65     .8130   1.0309     .558282
+          70     .3225   1.0213     .276858
+          75     .9938   1.0197     .631684
+          80    2.7762   1.0627     .938587
+          85     .3952   1.0537     .327811
+          90    1.1535   1.0499     .686287
+          95    2.4023   1.0686     .910573
+         100     .4410   1.0249     .358013
+     MINIMUM DISTANCE TEST for AUM32.32       
+          Result of KS test on 20 transformed mindist^2's:
+                                  p-value= .737260
+--------------------------------------------------------------------------------
+               The 3DSPHERES test for file AUM32.32       
+ sample no:  1     r^3=   3.833     p-value= .11995
+ sample no:  2     r^3=  16.185     p-value= .41696
+ sample no:  3     r^3=   3.259     p-value= .10295
+ sample no:  4     r^3=  35.976     p-value= .69857
+ sample no:  5     r^3=   1.621     p-value= .05261
+ sample no:  6     r^3=   9.473     p-value= .27077
+ sample no:  7     r^3=   8.762     p-value= .25329
+ sample no:  8     r^3=  31.226     p-value= .64685
+ sample no:  9     r^3=  56.871     p-value= .84978
+ sample no: 10     r^3=  42.273     p-value= .75563
+ sample no: 11     r^3=  34.590     p-value= .68431
+ sample no: 12     r^3=   3.850     p-value= .12044
+ sample no: 13     r^3=  36.129     p-value= .70010
+ sample no: 14     r^3=  18.237     p-value= .45550
+ sample no: 15     r^3=  36.999     p-value= .70867
+ sample no: 16     r^3=  16.154     p-value= .41636
+ sample no: 17     r^3=  53.324     p-value= .83094
+ sample no: 18     r^3=   2.369     p-value= .07592
+ sample no: 19     r^3=  12.218     p-value= .33453
+ sample no: 20     r^3=  30.266     p-value= .63537
+       3DSPHERES test for file AUM32.32             p-value= .442711
+--------------------------------------------------------------------------------
+            RESULTS OF SQUEEZE TEST FOR AUM32.32       
+         Table of standardized frequency counts
+     ( (obs-exp)/sqrt(exp) )^2
+        for j taking values <=6,7,8,...,47,>=48:
+    -1.5      .5     -.4      .9     -.9     1.0
+    -1.0      .9     -.4     -.4      .9     -.4
+     -.7     -.9      .7      .9    -1.5      .5
+      .9      .0      .2     -.1     1.1     -.6
+      .0     -.8    -1.3      .4      .3     1.9
+     -.7     -.1      .4     1.1     -.1    -2.1
+     -.9    -1.7    -1.6     -.1     -.6      .0
+    -1.1
+           Chi-square with 42 degrees of freedom: 36.154
+              z-score=  -.638  p-value= .275196
+______________________________________________________________
+--------------------------------------------------------------------------------
+                Test no.  1      p-value  .604636
+                Test no.  2      p-value  .409698
+                Test no.  3      p-value  .667864
+                Test no.  4      p-value  .716188
+                Test no.  5      p-value  .924081
+                Test no.  6      p-value  .335286
+                Test no.  7      p-value  .373072
+                Test no.  8      p-value  .356371
+                Test no.  9      p-value  .102084
+                Test no. 10      p-value  .616379
+   Results of the OSUM test for AUM32.32       
+        KSTEST on the above 10 p-values:  .263349
+--------------------------------------------------------------------------------
+           The RUNS test for file AUM32.32       
+     Up and down runs in a sample of 10000
+_________________________________________________ 
+                 Run test for AUM32.32       :
+       runs up; ks test for 10 p's: .223617
+     runs down; ks test for 10 p's: .502688
+                 Run test for AUM32.32       :
+       runs up; ks test for 10 p's: .364475
+     runs down; ks test for 10 p's: .248842
+--------------------------------------------------------------------------------
+                Results of craps test for AUM32.32       
+  No. of wins:  Observed Expected
+                                98857    98585.86
+ Chisq=  34.74 for 20 degrees of freedom, p=  .97849
+               Throws Observed Expected  Chisq     Sum
+            SUMMARY  FOR AUM32.32       
+                p-value for no. of wins: .887378
+                p-value for throws/game: .978492
+  Test completed.  File AUM32.32       
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

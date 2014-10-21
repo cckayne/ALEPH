@@ -1,0 +1,333 @@
+ BIRTHDAY SPACINGS TEST, M= 512 N=2**24 LAMBDA=  2.0000
+           KISS.32         using bits  1 to 24 p-value=  .748450
+           KISS.32         using bits  2 to 25 p-value=  .138050
+           KISS.32         using bits  3 to 26 p-value=  .154332
+           KISS.32         using bits  4 to 27 p-value=  .298985
+           KISS.32         using bits  5 to 28 p-value=  .951386
+           KISS.32         using bits  6 to 29 p-value=  .424316
+           KISS.32         using bits  7 to 30 p-value=  .068790
+           KISS.32         using bits  8 to 31 p-value=  .241374
+           KISS.32         using bits  9 to 32 p-value=  .164401
+   The 9 p-values were
+        .748450   .138050   .154332   .298985   .951386
+        .424316   .068790   .241374   .164401
+  A KSTEST for the 9 p-values yields  .848175
+--------------------------------------------------------------------------------
+           OPERM5 test for file KISS.32        
+ chisquare for 99 degrees of freedom= 92.423; p-value= .333307
+           OPERM5 test for file KISS.32        
+ chisquare for 99 degrees of freedom=133.122; p-value= .987364
+--------------------------------------------------------------------------------
+    Binary rank test for KISS.32        
+         Rank test for 31x31 binary matrices:
+        rows from leftmost 31 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        28       200     211.4   .616651     .617
+        29      5181    5134.0   .430080    1.047
+        30     23045   23103.0   .145844    1.193
+        31     11574   11551.5   .043730    1.236
+  chisquare= 1.236 for 3 d. of f.; p-value= .388782
+    Binary rank test for KISS.32        
+         Rank test for 32x32 binary matrices:
+        rows from leftmost 32 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        29       205     211.4   .194832     .195
+        30      5175    5134.0   .327261     .522
+        31     23108   23103.0   .001062     .523
+        32     11512   11551.5   .135236     .658
+  chisquare=  .658 for 3 d. of f.; p-value= .325620
+--------------------------------------------------------------------------------
+ b-rank test for bits  1 to  8 p=1-exp(-SUM/2)= .07824
+ b-rank test for bits  2 to  9 p=1-exp(-SUM/2)= .75041
+ b-rank test for bits  3 to 10 p=1-exp(-SUM/2)= .88586
+ b-rank test for bits  4 to 11 p=1-exp(-SUM/2)= .30529
+ b-rank test for bits  5 to 12 p=1-exp(-SUM/2)= .53534
+ b-rank test for bits  6 to 13 p=1-exp(-SUM/2)= .33555
+ b-rank test for bits  7 to 14 p=1-exp(-SUM/2)= .26571
+ b-rank test for bits  8 to 15 p=1-exp(-SUM/2)= .40194
+ b-rank test for bits  9 to 16 p=1-exp(-SUM/2)= .86636
+ b-rank test for bits 10 to 17 p=1-exp(-SUM/2)= .55488
+ b-rank test for bits 11 to 18 p=1-exp(-SUM/2)= .59090
+ b-rank test for bits 12 to 19 p=1-exp(-SUM/2)= .06530
+ b-rank test for bits 13 to 20 p=1-exp(-SUM/2)= .88804
+ b-rank test for bits 14 to 21 p=1-exp(-SUM/2)= .26227
+ b-rank test for bits 15 to 22 p=1-exp(-SUM/2)= .59719
+ b-rank test for bits 16 to 23 p=1-exp(-SUM/2)= .86917
+ b-rank test for bits 17 to 24 p=1-exp(-SUM/2)= .20133
+ b-rank test for bits 18 to 25 p=1-exp(-SUM/2)= .48953
+ b-rank test for bits 19 to 26 p=1-exp(-SUM/2)= .10230
+ b-rank test for bits 20 to 27 p=1-exp(-SUM/2)= .56293
+ b-rank test for bits 21 to 28 p=1-exp(-SUM/2)= .70901
+ b-rank test for bits 22 to 29 p=1-exp(-SUM/2)= .03744
+ b-rank test for bits 23 to 30 p=1-exp(-SUM/2)= .29437
+ b-rank test for bits 24 to 31 p=1-exp(-SUM/2)= .70729
+ b-rank test for bits 25 to 32 p=1-exp(-SUM/2)= .16067
+   TEST SUMMARY, 25 tests on 100,000 random 6x8 matrices
+ These should be 25 uniform [0,1] random variables:
+     .078241     .750411     .885863     .305294     .535339
+     .335548     .265713     .401936     .866359     .554881
+     .590897     .065303     .888038     .262270     .597188
+     .869166     .201326     .489533     .102300     .562930
+     .709013     .037439     .294374     .707294     .160670
+   brank test summary for KISS.32        
+       The KS test for those 25 supposed UNI's yields
+                    KS p-value= .219352
+--------------------------------------------------------------------------------
+  No. missing words should average  141909. with sigma=428.
+ tst no  1:  141914 missing words,     .01 sigmas from mean, p-value= .50435
+ tst no  2:  142595 missing words,    1.60 sigmas from mean, p-value= .94543
+ tst no  3:  141528 missing words,    -.89 sigmas from mean, p-value= .18648
+ tst no  4:  142018 missing words,     .25 sigmas from mean, p-value= .60022
+ tst no  5:  142175 missing words,     .62 sigmas from mean, p-value= .73261
+ tst no  6:  142489 missing words,    1.35 sigmas from mean, p-value= .91219
+ tst no  7:  141612 missing words,    -.69 sigmas from mean, p-value= .24362
+ tst no  8:  141785 missing words,    -.29 sigmas from mean, p-value= .38572
+ tst no  9:  141338 missing words,   -1.33 sigmas from mean, p-value= .09096
+ tst no 10:  141910 missing words,     .00 sigmas from mean, p-value= .50063
+ tst no 11:  141499 missing words,    -.96 sigmas from mean, p-value= .16885
+ tst no 12:  142397 missing words,    1.14 sigmas from mean, p-value= .87274
+ tst no 13:  142334 missing words,     .99 sigmas from mean, p-value= .83946
+ tst no 14:  141368 missing words,   -1.26 sigmas from mean, p-value= .10297
+ tst no 15:  141026 missing words,   -2.06 sigmas from mean, p-value= .01952
+ tst no 16:  142039 missing words,     .30 sigmas from mean, p-value= .61904
+ tst no 17:  142051 missing words,     .33 sigmas from mean, p-value= .62968
+ tst no 18:  141715 missing words,    -.45 sigmas from mean, p-value= .32490
+ tst no 19:  142170 missing words,     .61 sigmas from mean, p-value= .72875
+ tst no 20:  142065 missing words,     .36 sigmas from mean, p-value= .64197
+--------------------------------------------------------------------------------
+    OPSO for KISS.32         using bits 23 to 32        142027   .406  .6575
+    OPSO for KISS.32         using bits 22 to 31        142277  1.268  .8976
+    OPSO for KISS.32         using bits 21 to 30        141797  -.387  .3493
+    OPSO for KISS.32         using bits 20 to 29        142129   .757  .7756
+    OPSO for KISS.32         using bits 19 to 28        142048   .478  .6837
+    OPSO for KISS.32         using bits 18 to 27        142207  1.026  .8477
+    OPSO for KISS.32         using bits 17 to 26        141735  -.601  .2739
+    OPSO for KISS.32         using bits 16 to 25        141810  -.343  .3660
+    OPSO for KISS.32         using bits 15 to 24        141771  -.477  .3167
+    OPSO for KISS.32         using bits 14 to 23        142211  1.040  .8509
+    OPSO for KISS.32         using bits 13 to 22        142314  1.395  .9186
+    OPSO for KISS.32         using bits 12 to 21        142581  2.316  .9897
+    OPSO for KISS.32         using bits 11 to 20        141943   .116  .5462
+    OPSO for KISS.32         using bits 10 to 19        141998   .306  .6201
+    OPSO for KISS.32         using bits  9 to 18        141976   .230  .5909
+    OPSO for KISS.32         using bits  8 to 17        142058   .513  .6959
+    OPSO for KISS.32         using bits  7 to 16        141990   .278  .6096
+    OPSO for KISS.32         using bits  6 to 15        141620  -.998  .1592
+    OPSO for KISS.32         using bits  5 to 14        141946   .126  .5503
+    OPSO for KISS.32         using bits  4 to 13        141773  -.470  .3191
+    OPSO for KISS.32         using bits  3 to 12        142329  1.447  .9261
+    OPSO for KISS.32         using bits  2 to 11        142090   .623  .7334
+    OPSO for KISS.32         using bits  1 to 10        141833  -.263  .3962
+    OQSO for KISS.32         using bits 28 to 32        141350 -1.896  .0290
+    OQSO for KISS.32         using bits 27 to 31        141974   .219  .5868
+    OQSO for KISS.32         using bits 26 to 30        142273  1.233  .8912
+    OQSO for KISS.32         using bits 25 to 29        142450  1.833  .9666
+    OQSO for KISS.32         using bits 24 to 28        141939   .101  .5401
+    OQSO for KISS.32         using bits 23 to 27        141527 -1.296  .0975
+    OQSO for KISS.32         using bits 22 to 26        142369  1.558  .9404
+    OQSO for KISS.32         using bits 21 to 25        142102   .653  .7432
+    OQSO for KISS.32         using bits 20 to 24        141554 -1.205  .1142
+    OQSO for KISS.32         using bits 19 to 23        141751  -.537  .2957
+    OQSO for KISS.32         using bits 18 to 22        142036   .429  .6662
+    OQSO for KISS.32         using bits 17 to 21        141843  -.225  .4111
+    OQSO for KISS.32         using bits 16 to 20        142190   .951  .8293
+    OQSO for KISS.32         using bits 15 to 19        141543 -1.242  .1072
+    OQSO for KISS.32         using bits 14 to 18        142316  1.379  .9160
+    OQSO for KISS.32         using bits 13 to 17        141887  -.076  .4698
+    OQSO for KISS.32         using bits 12 to 16        141709  -.679  .2485
+    OQSO for KISS.32         using bits 11 to 15        142214  1.033  .8491
+    OQSO for KISS.32         using bits 10 to 14        141510 -1.354  .0879
+    OQSO for KISS.32         using bits  9 to 13        142507  2.026  .9786
+    OQSO for KISS.32         using bits  8 to 12        142331  1.429  .9236
+    OQSO for KISS.32         using bits  7 to 11        141941   .107  .5427
+    OQSO for KISS.32         using bits  6 to 10        141899  -.035  .4860
+    OQSO for KISS.32         using bits  5 to  9        141721  -.638  .2616
+    OQSO for KISS.32         using bits  4 to  8        142550  2.172  .9851
+    OQSO for KISS.32         using bits  3 to  7        141719  -.645  .2594
+    OQSO for KISS.32         using bits  2 to  6        141756  -.520  .3016
+    OQSO for KISS.32         using bits  1 to  5        141870  -.133  .4470
+     DNA for KISS.32         using bits 31 to 32        141590  -.942  .1731
+     DNA for KISS.32         using bits 30 to 31        142726  2.409  .9920
+     DNA for KISS.32         using bits 29 to 30        141700  -.617  .2685
+     DNA for KISS.32         using bits 28 to 29        141975   .194  .5768
+     DNA for KISS.32         using bits 27 to 28        141721  -.556  .2893
+     DNA for KISS.32         using bits 26 to 27        142215   .902  .8164
+     DNA for KISS.32         using bits 25 to 26        142523  1.810  .9649
+     DNA for KISS.32         using bits 24 to 25        141736  -.511  .3046
+     DNA for KISS.32         using bits 23 to 24        142180   .798  .7877
+     DNA for KISS.32         using bits 22 to 23        142025   .341  .6335
+     DNA for KISS.32         using bits 21 to 22        141946   .108  .5431
+     DNA for KISS.32         using bits 20 to 21        141383 -1.553  .0603
+     DNA for KISS.32         using bits 19 to 20        142889  2.890  .9981
+     DNA for KISS.32         using bits 18 to 19        141732  -.523  .3005
+     DNA for KISS.32         using bits 17 to 18        141663  -.727  .2337
+     DNA for KISS.32         using bits 16 to 17        142115   .607  .7280
+     DNA for KISS.32         using bits 15 to 16        142038   .380  .6479
+     DNA for KISS.32         using bits 14 to 15        141706  -.600  .2743
+     DNA for KISS.32         using bits 13 to 14        142000   .267  .6054
+     DNA for KISS.32         using bits 12 to 13        142095   .548  .7081
+     DNA for KISS.32         using bits 11 to 12        142612  2.073  .9809
+     DNA for KISS.32         using bits 10 to 11        141884  -.075  .4702
+     DNA for KISS.32         using bits  9 to 10        142046   .403  .6566
+     DNA for KISS.32         using bits  8 to  9        142268  1.058  .8550
+     DNA for KISS.32         using bits  7 to  8        142560  1.919  .9725
+     DNA for KISS.32         using bits  6 to  7        141685  -.662  .2541
+     DNA for KISS.32         using bits  5 to  6        141844  -.193  .4236
+     DNA for KISS.32         using bits  4 to  5        141475 -1.281  .1001
+     DNA for KISS.32         using bits  3 to  4        142294  1.135  .8718
+     DNA for KISS.32         using bits  2 to  3        141717  -.567  .2852
+     DNA for KISS.32         using bits  1 to  2        141612  -.877  .1902
+--------------------------------------------------------------------------------
+   Test results for KISS.32        
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size:2560000
+                               chisquare  equiv normal  p-value
+  Results fo COUNT-THE-1's in successive bytes:
+ byte stream for KISS.32          2583.96      1.187      .882450
+ byte stream for KISS.32          2543.81       .620      .732222
+--------------------------------------------------------------------------------
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size: 256000
+                      chisquare  equiv normal  p value
+  Results for COUNT-THE-1's in specified bytes:
+           bits  1 to  8  2551.64       .730      .767378
+           bits  2 to  9  2565.10       .921      .821391
+           bits  3 to 10  2577.88      1.101      .864646
+           bits  4 to 11  2511.80       .167      .566284
+           bits  5 to 12  2533.98       .481      .684589
+           bits  6 to 13  2531.16       .441      .670294
+           bits  7 to 14  2642.18      2.011      .977826
+           bits  8 to 15  2485.62      -.203      .419450
+           bits  9 to 16  2480.24      -.279      .389931
+           bits 10 to 17  2599.74      1.411      .920812
+           bits 11 to 18  2586.92      1.229      .890495
+           bits 12 to 19  2352.07     -2.092      .018220
+           bits 13 to 20  2427.35     -1.027      .152114
+           bits 14 to 21  2533.83       .478      .683818
+           bits 15 to 22  2421.47     -1.111      .133364
+           bits 16 to 23  2529.83       .422      .663461
+           bits 17 to 24  2530.93       .437      .669096
+           bits 18 to 25  2589.49      1.266      .897156
+           bits 19 to 26  2468.83      -.441      .329659
+           bits 20 to 27  2513.66       .193      .576564
+           bits 21 to 28  2483.17      -.238      .405924
+           bits 22 to 29  2545.43       .643      .739738
+           bits 23 to 30  2435.66      -.910      .181440
+           bits 24 to 31  2584.32      1.192      .883460
+           bits 25 to 32  2427.06     -1.032      .151133
+--------------------------------------------------------------------------------
+           CDPARK: result of ten tests on file KISS.32        
+            Of 12,000 tries, the average no. of successes
+                 should be 3523 with sigma=21.9
+            Successes: 3513    z-score:  -.457 p-value: .323972
+            Successes: 3511    z-score:  -.548 p-value: .291865
+            Successes: 3519    z-score:  -.183 p-value: .427537
+            Successes: 3530    z-score:   .320 p-value: .625377
+            Successes: 3503    z-score:  -.913 p-value: .180558
+            Successes: 3520    z-score:  -.137 p-value: .445521
+            Successes: 3531    z-score:   .365 p-value: .642555
+            Successes: 3512    z-score:  -.502 p-value: .307734
+            Successes: 3521    z-score:  -.091 p-value: .463618
+            Successes: 3534    z-score:   .502 p-value: .692266
+ 
+           square size   avg. no.  parked   sample sigma
+             100.            3519.400        9.447
+            KSTEST for the above 10: p=  .751027
+--------------------------------------------------------------------------------
+               This is the MINIMUM DISTANCE test
+              for random integers in the file KISS.32        
+     Sample no.    d^2     avg     equiv uni            
+           5     .4267   1.2277     .348707
+          10     .5487    .9631     .423867
+          15     .6454   1.2191     .477222
+          20     .1622   1.0679     .150390
+          25    1.2774   1.0534     .723019
+          30     .0250    .9881     .024807
+          35    1.4144   1.0747     .758659
+          40     .4738    .9975     .378849
+          45     .6031    .9865     .454553
+          50     .5303    .9265     .413123
+          55     .2240    .9452     .201546
+          60    1.5148    .9088     .781814
+          65     .3835    .8939     .319811
+          70     .1143    .9021     .108538
+          75     .0119    .8962     .011865
+          80     .6386    .8794     .473653
+          85     .1658    .8787     .153478
+          90    1.1213    .8636     .675977
+          95     .1857    .8267     .170247
+         100    3.4718    .8442     .969477
+     MINIMUM DISTANCE TEST for KISS.32        
+          Result of KS test on 20 transformed mindist^2's:
+                                  p-value= .670576
+--------------------------------------------------------------------------------
+               The 3DSPHERES test for file KISS.32        
+ sample no:  1     r^3=   1.298     p-value= .04235
+ sample no:  2     r^3=  28.342     p-value= .61121
+ sample no:  3     r^3=  21.104     p-value= .50514
+ sample no:  4     r^3=   7.675     p-value= .22574
+ sample no:  5     r^3=   8.457     p-value= .24565
+ sample no:  6     r^3=  17.077     p-value= .43404
+ sample no:  7     r^3=  50.172     p-value= .81221
+ sample no:  8     r^3=  16.937     p-value= .43139
+ sample no:  9     r^3=  44.462     p-value= .77283
+ sample no: 10     r^3=  14.399     p-value= .38119
+ sample no: 11     r^3= 116.173     p-value= .97919
+ sample no: 12     r^3=   1.087     p-value= .03558
+ sample no: 13     r^3=  52.108     p-value= .82394
+ sample no: 14     r^3=  35.697     p-value= .69575
+ sample no: 15     r^3=    .420     p-value= .01389
+ sample no: 16     r^3=  43.821     p-value= .76793
+ sample no: 17     r^3=   3.431     p-value= .10808
+ sample no: 18     r^3=  36.899     p-value= .70770
+ sample no: 19     r^3=  46.386     p-value= .78694
+ sample no: 20     r^3=  26.513     p-value= .58677
+       3DSPHERES test for file KISS.32              p-value= .209322
+--------------------------------------------------------------------------------
+            RESULTS OF SQUEEZE TEST FOR KISS.32        
+         Table of standardized frequency counts
+     ( (obs-exp)/sqrt(exp) )^2
+        for j taking values <=6,7,8,...,47,>=48:
+     -.1    -1.2     -.8      .6     -.8      .3
+      .5    -1.7    -2.1      .8     -.8      .2
+      .6    -1.4     3.6     -.8      .5    -1.6
+      .0     -.5     -.2      .4     1.3     -.4
+      .2     -.5     1.4      .5     1.0    -1.3
+    -1.8     -.5     2.4    -1.1     -.6    -1.6
+    -1.2     -.1     -.4     -.7      .9    -1.0
+    -1.1
+           Chi-square with 42 degrees of freedom: 56.299
+              z-score=  1.560  p-value= .930987
+______________________________________________________________
+--------------------------------------------------------------------------------
+                Test no.  1      p-value  .819655
+                Test no.  2      p-value  .097071
+                Test no.  3      p-value  .198456
+                Test no.  4      p-value  .202804
+                Test no.  5      p-value  .225522
+                Test no.  6      p-value  .650027
+                Test no.  7      p-value  .939684
+                Test no.  8      p-value  .058109
+                Test no.  9      p-value  .719783
+                Test no. 10      p-value  .232989
+   Results of the OSUM test for KISS.32        
+        KSTEST on the above 10 p-values:  .621878
+--------------------------------------------------------------------------------
+           The RUNS test for file KISS.32        
+     Up and down runs in a sample of 10000
+_________________________________________________ 
+                 Run test for KISS.32        :
+       runs up; ks test for 10 p's: .544744
+     runs down; ks test for 10 p's: .297915
+                 Run test for KISS.32        :
+       runs up; ks test for 10 p's: .675162
+     runs down; ks test for 10 p's: .921913
+--------------------------------------------------------------------------------
+                Results of craps test for KISS.32        
+  No. of wins:  Observed Expected
+                                98514    98585.86
+ Chisq=  18.43 for 20 degrees of freedom, p=  .44088
+               Throws Observed Expected  Chisq     Sum
+            SUMMARY  FOR KISS.32        
+                p-value for no. of wins: .373955
+                p-value for throws/game: .440884
+  Test completed.  File KISS.32        
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

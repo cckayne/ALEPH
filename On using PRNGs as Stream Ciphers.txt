@@ -1,0 +1,165 @@
+On Using PRNGs as the Basis for Stream Ciphers
+----------------------------------------------
+
+The thesis of this informal essay is that any pseudo-random number generator (PRNG) may be used as the basis for a cryptographically secure stream cipher, so long as the PRNG is unbiased and the modulo (%) operator or some other function is utilized to constrain its raw output prior to use. More succinctly:
+
+----------------------------------------------------------------------
+Every unbiased PRNG is as secure as any other under the MOD operation.
+----------------------------------------------------------------------
+
+Whilst the following simple facts and conclusions should be self-evident, I have felt the need to express them because no one anywhere else appears to have done so.
+
+Most PRNGs emit a sequence of 32- or 64-bit unsigned integers, each word in the range [0..4294967296] or [0..18446744073709551616]. 
+
+For cryptographic purposes, these quantities must be corralled between a zero and a reduced maximum value using modulo arithmetic. We take the remainder after division by the length of our desired alphabet: MOD 26 gives us [0..25], the traditional 'A' to 'Z' beloved of cryptographers from ancient times; MOD 95 [0..94] furnishes all the printable ASCII characters; MOD 256 [0..255] provides every possible ASCII byte. We refer to these processed bytes as the key-stream or confusion sequence. 
+
+Commentators on the "security" of PRNGs all appear to have forgotten that the raw numeric output from a pseudo-random number generator is hardly ever utilized as the final key-stream. Ciphers don't use 32-bit words; they use 8-bit bytes. Letters, punctuation and numbers from 0 to 9.
+
+Because a PRNG's raw output is never used directly for cipher generation, the PRNG itself does not need to possess the property of unpredictability. Generation of the confusion sequence always involves post-processing. It is the key-stream that needs to exhibit unpredictability rather than the generator's own stream of bits. Put another way, the requirement for unpredictability is shifted from the bit- to the byte-level. Given a string of bytes, an adversary must not be able to guess what the next byte-value in the sequence will be or to deduce previous values from subsequent ones. This is the essence of cryptographic security. 
+
+Due to the intractability of successfully guessing the value of the 32-bit quantity that produced a given byte under modulo division, complete unpredictability in a random number generator is by no means essential (though it is admittedly a desirable additional attribute). It cannot be stressed often enough that it is only the confusion sequence - our key-stream - that *must* be unpredictable. The sole characteristic raw and processed output share is their apparent randomness. While the PRNG's raw data may crumble under mathematical scrutiny, its key-stream should not, and generally will not. This applies to every good RNG ever conjured up by the black arts.
+
+The following sample should illustrate the wisdom of post-processing with MOD:
+
+Raw output		Mod 2		Mod 26		Mod 256
+-----------------------------------------------
+1886806426 		  0			  Y			  9A
+3050137003 		  1			  R			  AB
+1850590023 		  1			  J			  47
+2902029481 		  1			  N			  A9
+1687931640 		  0			  S			  F8
+3100468547 		  1			  H			  43
+1903556293 		  1			  P			  C5
+2606418804 		  0			  C			  74
+
+It is self-evidently impossible to deduce the original 32-bit quantity from the result of the modulo division. The generator's bit stream is rendered irrelevant. We can say whether the raw quantity was odd or even, heads or tails, which narrows our list of potential originating candidates to a mere 2 billion per byte, or list the hundreds of thousands of possible dividends resulting in the given character. The problem is clearly intractable and analysis can proceed no further. A cryptanalyst's only hope is to brute-force identical results by guessing the seed.
+
+From a cryptanalytical standpoint, the foregoing boils down to this: Attempting to attack a pseudo-random number generator is a waste of time. The correct target is its confusion sequence, which is impenetrable. And since dissecting random functions is the acme of futility, all cryptanalytical efforts in this area to date may justly be considered void. As a corollary, designing a cipher to output bytes is the pinnacle of folly: a 32 or 64 bit RNG is the only sensible basis for any digital cipher.
+
+As long as a PRNG fulfills the pre-requisites of uniform distribution and lack of bias, it can be said to be "cryptographically secure" provided that its raw numeric output is not used as a key stream. Under MOD, we are just as safe with KISS as with ISAAC, even though the former was not designed with ciphering in mind, while the latter was. Both are equally unbiased (in fact, KISS arguably has the edge over ISAAC in appearance of randomness).
+
+What *is* vitally important when using any PRNG as the basis for a stream cipher is the property of the SEED. The RNG in question must be designed - or adapted - to accept an alphanumeric seed of no less than 64-bits in length. A 32-bit integer will not do. Even a 64-bit integer is cutting it fine. 
+
+The seed should ideally be a string or hash digest with a minimum length of 128 bits, or 16 bytes. If the PRNG is a conventional one like KISS, designed by George Marsaglia to take a 32-bit numeric seed, the seeding function must be adapted to mix in a greater number of seed-bytes prior to calling the generator for pseudo-random output. For this purpose, an internal state array of some given length - usually a power of 2 - may be introduced to act as a mixing receptacle for the seed-bytes. Then the faster that mixing can be made to occur, the better: a phenomenon called avalanche. Increasing state-size in this way brings the concomitant advantage of vastly extending the RNG's average cycle (which is always a function of the number of terms, or variables).
+
+Assuming a competent adaptation of its seeding and mixing mechanism, there is no reason why KISS may not be used to generate a modulo-constrained key stream with cryptographic strength. Even the most basic linear congruential generator might be pressed into service; again, provided its seeding routine were efficiently adapted. 
+
+All things considered, there is much to be said for doing just this. Good "non-cryptographic" PRNGs are far more numerous, often much faster and more easily implemented, than the "cryptographic" variety and usually display superior entropic and stochastic properties. 
+
+The original terse thesis may now be augmented with the requirement for a good seeding function:
+
+-----------------------------------------------------------------------------------
+Every unbiased PRNG is as secure as any other under the MOD operation, given a seed of adequate length.
+-----------------------------------------------------------------------------------
+
+a statement which dovetails conveniently with the Central Axiom of cryptography:
+
+-----------------------------------------------------
+Any cipher is only as good as the key provided to it.
+-----------------------------------------------------
+
+One cipher is as strong as any other: It's the key that matters. A key that is too short or guessable will result in a broken cipher, however lauded, "analyzed" or "standardized" the cipher. A strong key will ensure that any cipher stays secure forever. Yea, even RC4, the humble Vigenere, Caesar, or one's own. 
+
+The happy upshot of relaxing the requirement for unpredictability in the random function is that a template for upgrading any existing PRNG to "cryptographic" grade may now be presented. 
+
+In essence, the procedure consists of plugging our RNG into a mixer loop. A state array of any desired power of 2 is incorporated to receive the extended seed bytes. Four variables - b, c, d, e - are introduced to accelerate the mixing and increase overall avalanche. A state-size of 8 always produces the most rapid mixing, giving avalanche in excess of 16 bits, while 16 and above tends to minimize the chances of bias. Very little performance overhead is experienced, since the mixer employs only one XOR, one subtraction and two addition operations.
+
+The chosen mixer, AUM (pronounced 'OM'), is an eminently serviceable CSPRNG in its own right, with outstanding stochastic characteristics:
+
+		#define STSZ 16
+		#define STM1 STSZ-1
+				
+		for (i=0; i<STSZ; i++) {
+			e = state[d & STM1];
+			state[d & STM1] = b ^ c;
+			b = c - d;
+			c = d + e;
+			rsl[i] = d = e + state[i];
+		}
+
+Mean avalanche between successive calls to AUM is an impressive 16 bits, with a 30-bit maximum, figures which apply to all generators presented here. In other words, mixing efficiency is nearly optimal. AUM best reflects the Zen of PRNG creation - everything superfluous stripped away, leaving just six operations.
+
+ALEPH, the next stop after AUM, illustrates the plug-in concept with a simple accumulator:
+
+		#define STSZ 16
+		#define STM1 STSZ-1
+		#define ALEPH (++a)
+		
+		for (i=0; i<STSZ; i++) {
+			e = state[d & STM1] + ALEPH;
+			state[d & STM1] = b ^ c;
+			b = c - d;
+			c = d + e;
+			rsl[i] = d = e + state[i];
+		}
+
+ALEPH is extremely fast and passes all statistical tests for randomness. The epitome of minimalism in PRNG design, it comes highly recommended.
+
+Taking Marsaglia's excellent multiply-with-carry generator (MWC) as an example plug-in for an existing RNG, the mixing loop looks like this:
+
+		#define STSZ 16
+		#define STM1 STSZ-1
+		#define znew (z=36969*(z&65535)+(z>>16))
+		#define wnew (w=18000*(w&65535)+(w>>16))
+		#define MWC  ((znew<<16)+wnew )
+		
+		for (i=0; i<STSZ; i++) {
+			e = state[d & STM1] + MWC;
+			state[d & STM1] = b ^ c;
+			b = c - d;
+			c = d + e;
+			rsl[i] = d = e + state[i];
+		}
+
+The single pseudo-random lookup provides some welcome indirection, while results of the mix are deposited into the rsl array ready for use. The mixer is called every STSZ rounds of the generator. As would be expected with such a proven RNG at its core, the upgrade - which we'll call MARS16* - exhibits first-class stochastic and statistical properties, and passes all tests to which it has been subjected, including Marsaglia's own DIEHARD battery.
+
+Experimentation will reveal that in order to maintain sufficient avalanche and avoid bias, an RNG suitable for cryptography demands a minimum of 4 integer variables plus an internal state of at least 8 32-bit words - 12 words in total - with a safe minimum of 8 arithmetic or bitwise operations acting upon them. Exceeding this specification will improve the generator at a cost in performance that increases with each operation or term added.
+
+AUM and ALEPH aside, one of the shortest and simplest cryptographic generators this author has been able to find is called IOTA:
+
+		#define STSZ 16
+		#define STM1 STSZ-1
+		#define IOTA ((bb=aa+bb),(aa=bb-aa))
+		
+		for (i=0; i<STSZ; i++) {
+			e = state[d & STM1] + IOTA;
+			state[d & STM1] = b ^ c;
+			b = c - d;
+			c = d + e;
+			rsl[i] = d = e + state[i];
+		}
+
+IOTA is of course Marsaglia's tiny Fibonacci generator (FIB), miraculously transformed through AUM's mixing and indirection. 
+
+Any non-linear mapping is a fine basis for a strong cipher. The most basic operations in simple combinations - addition, subtraction, OR, XOR, shift and rotate - are invariably the best. Ensuring that every term affects every other practically guarantees success. 
+
+More art than science, digital cryptography is neither sacrosanct nor reserved for the few. Any half-competent programmer can craft a superb RNG in an hour plus a few days of rigorous testing. And, with an internal state greater than 128 bits, that generator will be cryptographically strong almost by definition once the magical MOD operation is applied as a final stage before output.
+
+Regrettably, since their very existential relevance depends upon it, "professional" cryptographers would have you believe otherwise; it is as if their running brief were to treat with hostility and resentment any person who might dare to suggest that strong cryptography is easy and for everyone (it is). 
+
+These same people become shrill at the mention of MOD, despite it having been demonstrated (see ModTrial.pas and SamTrial.c) that use of this operator to constrain RNG output results in the most nearly uniform value-distributions when contrasted with outcomes employing alternative schemes. In common with others, they are merely parrotting - and failing to test - conventional wisdom.
+
+For their edification and theirs alone, here follow four MOD 26 confusion sequences from 4 very different RNGs: one of them "non-cryptographic", another borderline "cryptographic", one very definitely of "cryptographic grade", and the last a stream of true random bits derived from atmospheric noise:
+
+1)
+HKLJQIYNTKGCJOPCEBPNRCWVYDDLLSMMXRBNWVRHNAGRTRCRCGOTVTCQAHLDTBBAKNSEXCOAPNQDIMEA
+
+2)
+MNZQYNJBPCSFBAHQDZMTNASDOIYXCCIVMELUANIVXXRHUAHKLGVUZJWXMWAVOTKKDACYNSCWTLXOCQHQ
+
+3)
+FEATONFEZJNYZEVDVOFFZGEBREBRSKRNSEYOFSZOVOUQBKPPYKMHGQAEUWCEEUUTAJDHXXMEBEQEAQPZ
+
+4)
+SGYMEXUDWAODVIQJUZGRZYVVKKWAJKTUPSPXLEADLJPNXEBESVATFMLNJBVKYUHQFPAZDVZGKWJMNDUI
+
+
+The streams are in no particular order and identical seeds were used.
+
+Could a "professional" tell the difference? Could he claim to discern patterns and biases? Could a hardened cracker brute-force these same results? Could he swear that these are not encipherments of some message? How many man-years might he waste trying to establish that? Could he name the generators? Could you? My own answer would be an unequivocal No. Modulo division is the great leveller. It can raise CONG to the level of ISAAC in a microsecond. The border between truly random and pseudo-random is non-existent.
+
+
+Conrad C. Kayne, October 2014
+cckayne@gmail.com
+
+* For a working implementation in C of the upgraded RNG, MARS16, please see under the C folder in the MARS repository. This essay, MARS, AUM, ALEPH and IOTA are all (TM) copyright C.C.Kayne 2014 and released under the GNU General Public License, V.3. Comprehensive test results for all generators are available in their respective repositories.

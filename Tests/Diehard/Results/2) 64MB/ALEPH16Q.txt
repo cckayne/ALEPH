@@ -1,0 +1,333 @@
+ BIRTHDAY SPACINGS TEST, M= 512 N=2**24 LAMBDA=  2.0000
+           ALEPH16.32      using bits  1 to 24 p-value=  .510640
+           ALEPH16.32      using bits  2 to 25 p-value=  .925187
+           ALEPH16.32      using bits  3 to 26 p-value=  .209898
+           ALEPH16.32      using bits  4 to 27 p-value=  .487257
+           ALEPH16.32      using bits  5 to 28 p-value=  .178571
+           ALEPH16.32      using bits  6 to 29 p-value=  .240206
+           ALEPH16.32      using bits  7 to 30 p-value=  .850461
+           ALEPH16.32      using bits  8 to 31 p-value=  .068152
+           ALEPH16.32      using bits  9 to 32 p-value=  .900633
+   The 9 p-values were
+        .510640   .925187   .209898   .487257   .178571
+        .240206   .850461   .068152   .900633
+  A KSTEST for the 9 p-values yields  .170784
+--------------------------------------------------------------------------------
+           OPERM5 test for file ALEPH16.32     
+ chisquare for 99 degrees of freedom= 71.895; p-value= .018421
+           OPERM5 test for file ALEPH16.32     
+ chisquare for 99 degrees of freedom=103.011; p-value= .628784
+--------------------------------------------------------------------------------
+    Binary rank test for ALEPH16.32     
+         Rank test for 31x31 binary matrices:
+        rows from leftmost 31 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        28       229     211.4  1.462156    1.462
+        29      5286    5134.0  4.499578    5.962
+        30     22972   23103.0   .743334    6.705
+        31     11513   11551.5   .128479    6.834
+  chisquare= 6.834 for 3 d. of f.; p-value= .927076
+    Binary rank test for ALEPH16.32     
+         Rank test for 32x32 binary matrices:
+        rows from leftmost 32 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        29       195     211.4  1.274968    1.275
+        30      5276    5134.0  3.926967    5.202
+        31     22969   23103.0   .777757    5.980
+        32     11560   11551.5   .006219    5.986
+  chisquare= 5.986 for 3 d. of f.; p-value= .894913
+--------------------------------------------------------------------------------
+ b-rank test for bits  1 to  8 p=1-exp(-SUM/2)= .53897
+ b-rank test for bits  2 to  9 p=1-exp(-SUM/2)= .03806
+ b-rank test for bits  3 to 10 p=1-exp(-SUM/2)= .44759
+ b-rank test for bits  4 to 11 p=1-exp(-SUM/2)= .61369
+ b-rank test for bits  5 to 12 p=1-exp(-SUM/2)= .34900
+ b-rank test for bits  6 to 13 p=1-exp(-SUM/2)= .19636
+ b-rank test for bits  7 to 14 p=1-exp(-SUM/2)= .73419
+ b-rank test for bits  8 to 15 p=1-exp(-SUM/2)= .77274
+ b-rank test for bits  9 to 16 p=1-exp(-SUM/2)= .85947
+ b-rank test for bits 10 to 17 p=1-exp(-SUM/2)= .19360
+ b-rank test for bits 11 to 18 p=1-exp(-SUM/2)= .98822
+ b-rank test for bits 12 to 19 p=1-exp(-SUM/2)= .60169
+ b-rank test for bits 13 to 20 p=1-exp(-SUM/2)= .27399
+ b-rank test for bits 14 to 21 p=1-exp(-SUM/2)= .40757
+ b-rank test for bits 15 to 22 p=1-exp(-SUM/2)= .34530
+ b-rank test for bits 16 to 23 p=1-exp(-SUM/2)= .44151
+ b-rank test for bits 17 to 24 p=1-exp(-SUM/2)= .01882
+ b-rank test for bits 18 to 25 p=1-exp(-SUM/2)= .32344
+ b-rank test for bits 19 to 26 p=1-exp(-SUM/2)= .00389
+ b-rank test for bits 20 to 27 p=1-exp(-SUM/2)= .52763
+ b-rank test for bits 21 to 28 p=1-exp(-SUM/2)= .36456
+ b-rank test for bits 22 to 29 p=1-exp(-SUM/2)= .73056
+ b-rank test for bits 23 to 30 p=1-exp(-SUM/2)= .71342
+ b-rank test for bits 24 to 31 p=1-exp(-SUM/2)= .19712
+ b-rank test for bits 25 to 32 p=1-exp(-SUM/2)= .51791
+   TEST SUMMARY, 25 tests on 100,000 random 6x8 matrices
+ These should be 25 uniform [0,1] random variables:
+     .538975     .038064     .447587     .613693     .348999
+     .196363     .734192     .772736     .859468     .193602
+     .988221     .601686     .273988     .407571     .345303
+     .441511     .018816     .323443     .003888     .527626
+     .364562     .730561     .713422     .197122     .517913
+   brank test summary for ALEPH16.32     
+       The KS test for those 25 supposed UNI's yields
+                    KS p-value= .567905
+--------------------------------------------------------------------------------
+  No. missing words should average  141909. with sigma=428.
+ tst no  1:  141651 missing words,    -.60 sigmas from mean, p-value= .27306
+ tst no  2:  142505 missing words,    1.39 sigmas from mean, p-value= .91800
+ tst no  3:  141532 missing words,    -.88 sigmas from mean, p-value= .18899
+ tst no  4:  141553 missing words,    -.83 sigmas from mean, p-value= .20255
+ tst no  5:  141722 missing words,    -.44 sigmas from mean, p-value= .33081
+ tst no  6:  141656 missing words,    -.59 sigmas from mean, p-value= .27696
+ tst no  7:  142103 missing words,     .45 sigmas from mean, p-value= .67455
+ tst no  8:  142152 missing words,     .57 sigmas from mean, p-value= .71464
+ tst no  9:  141763 missing words,    -.34 sigmas from mean, p-value= .36622
+ tst no 10:  141915 missing words,     .01 sigmas from mean, p-value= .50529
+ tst no 11:  141904 missing words,    -.01 sigmas from mean, p-value= .49503
+ tst no 12:  142782 missing words,    2.04 sigmas from mean, p-value= .97927
+ tst no 13:  141631 missing words,    -.65 sigmas from mean, p-value= .25775
+ tst no 14:  141981 missing words,     .17 sigmas from mean, p-value= .56650
+ tst no 15:  141737 missing words,    -.40 sigmas from mean, p-value= .34361
+ tst no 16:  143239 missing words,    3.11 sigmas from mean, p-value= .99905
+ tst no 17:  142258 missing words,     .81 sigmas from mean, p-value= .79236
+ tst no 18:  142044 missing words,     .31 sigmas from mean, p-value= .62349
+ tst no 19:  142491 missing words,    1.36 sigmas from mean, p-value= .91293
+ tst no 20:  142040 missing words,     .31 sigmas from mean, p-value= .61993
+--------------------------------------------------------------------------------
+    OPSO for ALEPH16.32      using bits 23 to 32        142104   .671  .7490
+    OPSO for ALEPH16.32      using bits 22 to 31        141636  -.943  .1730
+    OPSO for ALEPH16.32      using bits 21 to 30        141975   .226  .5896
+    OPSO for ALEPH16.32      using bits 20 to 29        141180 -2.515  .0060
+    OPSO for ALEPH16.32      using bits 19 to 28        141692  -.749  .2268
+    OPSO for ALEPH16.32      using bits 18 to 27        141859  -.174  .4311
+    OPSO for ALEPH16.32      using bits 17 to 26        141975   .226  .5896
+    OPSO for ALEPH16.32      using bits 16 to 25        141358 -1.901  .0286
+    OPSO for ALEPH16.32      using bits 15 to 24        141686  -.770  .2206
+    OPSO for ALEPH16.32      using bits 14 to 23        141437 -1.629  .0517
+    OPSO for ALEPH16.32      using bits 13 to 22        141809  -.346  .3647
+    OPSO for ALEPH16.32      using bits 12 to 21        142353  1.530  .9370
+    OPSO for ALEPH16.32      using bits 11 to 20        141434 -1.639  .0506
+    OPSO for ALEPH16.32      using bits 10 to 19        141965   .192  .5761
+    OPSO for ALEPH16.32      using bits  9 to 18        142305  1.364  .9138
+    OPSO for ALEPH16.32      using bits  8 to 17        141440 -1.618  .0528
+    OPSO for ALEPH16.32      using bits  7 to 16        142272  1.251  .8945
+    OPSO for ALEPH16.32      using bits  6 to 15        142015   .364  .6422
+    OPSO for ALEPH16.32      using bits  5 to 14        141833  -.263  .3962
+    OPSO for ALEPH16.32      using bits  4 to 13        141939   .102  .5407
+    OPSO for ALEPH16.32      using bits  3 to 12        141913   .013  .5051
+    OPSO for ALEPH16.32      using bits  2 to 11        141842  -.232  .4082
+    OPSO for ALEPH16.32      using bits  1 to 10        141815  -.325  .3725
+    OQSO for ALEPH16.32      using bits 28 to 32        141966   .192  .5762
+    OQSO for ALEPH16.32      using bits 27 to 31        141727  -.618  .2683
+    OQSO for ALEPH16.32      using bits 26 to 30        141681  -.774  .2195
+    OQSO for ALEPH16.32      using bits 25 to 29        141917   .026  .5104
+    OQSO for ALEPH16.32      using bits 24 to 28        141781  -.435  .3318
+    OQSO for ALEPH16.32      using bits 23 to 27        142272  1.229  .8905
+    OQSO for ALEPH16.32      using bits 22 to 26        141594 -1.069  .1426
+    OQSO for ALEPH16.32      using bits 21 to 25        141950   .138  .5548
+    OQSO for ALEPH16.32      using bits 20 to 24        141715  -.659  .2550
+    OQSO for ALEPH16.32      using bits 19 to 23        141893  -.055  .4779
+    OQSO for ALEPH16.32      using bits 18 to 22        141744  -.560  .2876
+    OQSO for ALEPH16.32      using bits 17 to 21        141978   .233  .5920
+    OQSO for ALEPH16.32      using bits 16 to 20        142473  1.911  .9720
+    OQSO for ALEPH16.32      using bits 15 to 19        141849  -.205  .4190
+    OQSO for ALEPH16.32      using bits 14 to 18        141336 -1.943  .0260
+    OQSO for ALEPH16.32      using bits 13 to 17        141712  -.669  .2518
+    OQSO for ALEPH16.32      using bits 12 to 16        141738  -.581  .2807
+    OQSO for ALEPH16.32      using bits 11 to 15        142369  1.558  .9404
+    OQSO for ALEPH16.32      using bits 10 to 14        141624  -.967  .1667
+    OQSO for ALEPH16.32      using bits  9 to 13        141394 -1.747  .0403
+    OQSO for ALEPH16.32      using bits  8 to 12        141903  -.021  .4914
+    OQSO for ALEPH16.32      using bits  7 to 11        141807  -.347  .3643
+    OQSO for ALEPH16.32      using bits  6 to 10        142287  1.280  .8998
+    OQSO for ALEPH16.32      using bits  5 to  9        142037   .433  .6674
+    OQSO for ALEPH16.32      using bits  4 to  8        142316  1.379  .9160
+    OQSO for ALEPH16.32      using bits  3 to  7        142271  1.226  .8899
+    OQSO for ALEPH16.32      using bits  2 to  6        142049   .473  .6821
+    OQSO for ALEPH16.32      using bits  1 to  5        141871  -.130  .4483
+     DNA for ALEPH16.32      using bits 31 to 32        142073   .483  .6854
+     DNA for ALEPH16.32      using bits 30 to 31        141211 -2.060  .0197
+     DNA for ALEPH16.32      using bits 29 to 30        141232 -1.998  .0229
+     DNA for ALEPH16.32      using bits 28 to 29        142028   .350  .6369
+     DNA for ALEPH16.32      using bits 27 to 28        141761  -.438  .3309
+     DNA for ALEPH16.32      using bits 26 to 27        142078   .498  .6906
+     DNA for ALEPH16.32      using bits 25 to 26        142043   .394  .6533
+     DNA for ALEPH16.32      using bits 24 to 25        141534 -1.107  .1341
+     DNA for ALEPH16.32      using bits 23 to 24        141753  -.461  .3223
+     DNA for ALEPH16.32      using bits 22 to 23        142157   .731  .7675
+     DNA for ALEPH16.32      using bits 21 to 22        141972   .185  .5733
+     DNA for ALEPH16.32      using bits 20 to 21        141940   .090  .5360
+     DNA for ALEPH16.32      using bits 19 to 20        141882  -.081  .4679
+     DNA for ALEPH16.32      using bits 18 to 19        141553 -1.051  .1466
+     DNA for ALEPH16.32      using bits 17 to 18        142112   .598  .7250
+     DNA for ALEPH16.32      using bits 16 to 17        142387  1.409  .9206
+     DNA for ALEPH16.32      using bits 15 to 16        142269  1.061  .8557
+     DNA for ALEPH16.32      using bits 14 to 15        141412 -1.467  .0712
+     DNA for ALEPH16.32      using bits 13 to 14        142471  1.657  .9512
+     DNA for ALEPH16.32      using bits 12 to 13        141428 -1.420  .0778
+     DNA for ALEPH16.32      using bits 11 to 12        142522  1.807  .9646
+     DNA for ALEPH16.32      using bits 10 to 11        141613  -.874  .1910
+     DNA for ALEPH16.32      using bits  9 to 10        141965   .164  .5652
+     DNA for ALEPH16.32      using bits  8 to  9        141992   .244  .5963
+     DNA for ALEPH16.32      using bits  7 to  8        141613  -.874  .1910
+     DNA for ALEPH16.32      using bits  6 to  7        141773  -.402  .3438
+     DNA for ALEPH16.32      using bits  5 to  6        142086   .521  .6989
+     DNA for ALEPH16.32      using bits  4 to  5        141853  -.166  .4340
+     DNA for ALEPH16.32      using bits  3 to  4        142465  1.639  .9494
+     DNA for ALEPH16.32      using bits  2 to  3        142323  1.220  .8888
+     DNA for ALEPH16.32      using bits  1 to  2        141988   .232  .5918
+--------------------------------------------------------------------------------
+   Test results for ALEPH16.32     
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size:2560000
+                               chisquare  equiv normal  p-value
+  Results fo COUNT-THE-1's in successive bytes:
+ byte stream for ALEPH16.32       2563.62       .900      .815867
+ byte stream for ALEPH16.32       2472.86      -.384      .350532
+--------------------------------------------------------------------------------
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size: 256000
+                      chisquare  equiv normal  p value
+  Results for COUNT-THE-1's in specified bytes:
+           bits  1 to  8  2477.40      -.320      .374612
+           bits  2 to  9  2555.66       .787      .784396
+           bits  3 to 10  2392.53     -1.520      .064271
+           bits  4 to 11  2560.68       .858      .804595
+           bits  5 to 12  2660.37      2.268      .988335
+           bits  6 to 13  2528.20       .399      .654972
+           bits  7 to 14  2576.75      1.085      .861125
+           bits  8 to 15  2587.98      1.244      .893283
+           bits  9 to 16  2547.55       .673      .749375
+           bits 10 to 17  2410.06     -1.272      .101699
+           bits 11 to 18  2545.97       .650      .742189
+           bits 12 to 19  2460.32      -.561      .287328
+           bits 13 to 20  2634.33      1.900      .971263
+           bits 14 to 21  2580.87      1.144      .873607
+           bits 15 to 22  2474.83      -.356      .360915
+           bits 16 to 23  2554.46       .770      .779398
+           bits 17 to 24  2445.14      -.776      .218917
+           bits 18 to 25  2539.70       .561      .712740
+           bits 19 to 26  2503.53       .050      .519911
+           bits 20 to 27  2538.73       .548      .708078
+           bits 21 to 28  2484.79      -.215      .414834
+           bits 22 to 29  2602.50      1.450      .926404
+           bits 23 to 30  2377.92     -1.726      .042131
+           bits 24 to 31  2451.34      -.688      .245686
+           bits 25 to 32  2479.72      -.287      .387112
+--------------------------------------------------------------------------------
+           CDPARK: result of ten tests on file ALEPH16.32     
+            Of 12,000 tries, the average no. of successes
+                 should be 3523 with sigma=21.9
+            Successes: 3534    z-score:   .502 p-value: .692266
+            Successes: 3517    z-score:  -.274 p-value: .392053
+            Successes: 3541    z-score:   .822 p-value: .794438
+            Successes: 3541    z-score:   .822 p-value: .794438
+            Successes: 3513    z-score:  -.457 p-value: .323972
+            Successes: 3538    z-score:   .685 p-value: .753306
+            Successes: 3525    z-score:   .091 p-value: .536382
+            Successes: 3551    z-score:  1.279 p-value: .899470
+            Successes: 3546    z-score:  1.050 p-value: .853193
+            Successes: 3531    z-score:   .365 p-value: .642555
+ 
+           square size   avg. no.  parked   sample sigma
+             100.            3533.700       11.675
+            KSTEST for the above 10: p=  .920312
+--------------------------------------------------------------------------------
+               This is the MINIMUM DISTANCE test
+              for random integers in the file ALEPH16.32     
+     Sample no.    d^2     avg     equiv uni            
+           5     .0928   1.6236     .089022
+          10     .2754   1.1359     .241769
+          15     .4037    .9527     .333507
+          20     .1645    .8851     .152350
+          25    2.9035    .9136     .945964
+          30     .3805   1.1141     .317785
+          35     .3447   1.1162     .292805
+          40     .6740   1.1842     .492081
+          45    3.5779   1.1734     .972564
+          50     .1860   1.1188     .170510
+          55    1.0126   1.1519     .638564
+          60    2.6603   1.1165     .930999
+          65     .2426   1.0920     .216405
+          70    1.2142   1.0721     .704867
+          75     .2370   1.0579     .211981
+          80    2.6601   1.0520     .930988
+          85     .2326   1.0584     .208443
+          90     .0133   1.0359     .013265
+          95    1.0861   1.0366     .664304
+         100     .7255   1.0303     .517683
+     MINIMUM DISTANCE TEST for ALEPH16.32     
+          Result of KS test on 20 transformed mindist^2's:
+                                  p-value= .117834
+--------------------------------------------------------------------------------
+               The 3DSPHERES test for file ALEPH16.32     
+ sample no:  1     r^3=    .409     p-value= .01355
+ sample no:  2     r^3=  10.448     p-value= .29408
+ sample no:  3     r^3=  15.857     p-value= .41055
+ sample no:  4     r^3=   8.332     p-value= .24249
+ sample no:  5     r^3=  11.320     p-value= .31432
+ sample no:  6     r^3=  42.356     p-value= .75631
+ sample no:  7     r^3=  35.229     p-value= .69096
+ sample no:  8     r^3=   1.155     p-value= .03777
+ sample no:  9     r^3=  21.069     p-value= .50456
+ sample no: 10     r^3=   6.694     p-value= .19998
+ sample no: 11     r^3=    .537     p-value= .01773
+ sample no: 12     r^3=   6.570     p-value= .19667
+ sample no: 13     r^3=  22.781     p-value= .53203
+ sample no: 14     r^3=  22.321     p-value= .52480
+ sample no: 15     r^3=  61.535     p-value= .87141
+ sample no: 16     r^3=  42.794     p-value= .75984
+ sample no: 17     r^3=  46.502     p-value= .78777
+ sample no: 18     r^3=   4.245     p-value= .13194
+ sample no: 19     r^3=  44.984     p-value= .77675
+ sample no: 20     r^3=  42.558     p-value= .75795
+       3DSPHERES test for file ALEPH16.32           p-value= .585584
+--------------------------------------------------------------------------------
+            RESULTS OF SQUEEZE TEST FOR ALEPH16.32     
+         Table of standardized frequency counts
+     ( (obs-exp)/sqrt(exp) )^2
+        for j taking values <=6,7,8,...,47,>=48:
+     1.3    -1.2     -.6     1.1     3.0      .7
+      .2    -1.2      .4     -.3     -.6     -.1
+     -.5      .9      .9    -1.2      .5     2.0
+    -1.0     1.9     -.3     -.5    -1.3     1.8
+    -2.1    -1.6     -.1     -.4      .7     -.7
+     -.6     -.1    -1.1      .0     -.5     -.3
+      .7      .5     -.4     -.7     -.6     3.0
+    -1.1
+           Chi-square with 42 degrees of freedom: 55.341
+              z-score=  1.456  p-value= .918757
+______________________________________________________________
+--------------------------------------------------------------------------------
+                Test no.  1      p-value  .343469
+                Test no.  2      p-value  .629669
+                Test no.  3      p-value  .809279
+                Test no.  4      p-value  .545995
+                Test no.  5      p-value  .822122
+                Test no.  6      p-value  .180271
+                Test no.  7      p-value  .091664
+                Test no.  8      p-value  .709489
+                Test no.  9      p-value  .581272
+                Test no. 10      p-value  .316879
+   Results of the OSUM test for ALEPH16.32     
+        KSTEST on the above 10 p-values:  .094263
+--------------------------------------------------------------------------------
+           The RUNS test for file ALEPH16.32     
+     Up and down runs in a sample of 10000
+_________________________________________________ 
+                 Run test for ALEPH16.32     :
+       runs up; ks test for 10 p's: .599033
+     runs down; ks test for 10 p's: .132162
+                 Run test for ALEPH16.32     :
+       runs up; ks test for 10 p's: .385389
+     runs down; ks test for 10 p's: .876790
+--------------------------------------------------------------------------------
+                Results of craps test for ALEPH16.32     
+  No. of wins:  Observed Expected
+                                98674    98585.86
+ Chisq=  23.38 for 20 degrees of freedom, p=  .72929
+               Throws Observed Expected  Chisq     Sum
+            SUMMARY  FOR ALEPH16.32     
+                p-value for no. of wins: .653289
+                p-value for throws/game: .729288
+  Test completed.  File ALEPH16.32     
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

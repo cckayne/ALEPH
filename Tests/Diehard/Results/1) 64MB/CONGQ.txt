@@ -1,0 +1,333 @@
+ BIRTHDAY SPACINGS TEST, M= 512 N=2**24 LAMBDA=  2.0000
+           CONG.32         using bits  1 to 24 p-value=  .411744
+           CONG.32         using bits  2 to 25 p-value=  .834551
+           CONG.32         using bits  3 to 26 p-value=  .024713
+           CONG.32         using bits  4 to 27 p-value=  .887178
+           CONG.32         using bits  5 to 28 p-value=  .754573
+           CONG.32         using bits  6 to 29 p-value= 1.000000
+           CONG.32         using bits  7 to 30 p-value=  .770936
+           CONG.32         using bits  8 to 31 p-value= 1.000000
+           CONG.32         using bits  9 to 32 p-value= 1.000000
+   The 9 p-values were
+        .411744   .834551   .024713   .887178   .754573
+       1.000000   .770936  1.000000  1.000000
+  A KSTEST for the 9 p-values yields 1.000000
+--------------------------------------------------------------------------------
+           OPERM5 test for file CONG.32        
+ chisquare for 99 degrees of freedom=145.473; p-value= .998340
+           OPERM5 test for file CONG.32        
+ chisquare for 99 degrees of freedom= 96.547; p-value= .448904
+--------------------------------------------------------------------------------
+    Binary rank test for CONG.32        
+         Rank test for 31x31 binary matrices:
+        rows from leftmost 31 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        28       223     211.4   .634489     .634
+        29      5186    5134.0   .526476    1.161
+        30     23081   23103.0   .021039    1.182
+        31     11510   11551.5   .149268    1.331
+  chisquare= 1.331 for 3 d. of f.; p-value= .402569
+    Binary rank test for CONG.32        
+         Rank test for 32x32 binary matrices:
+        rows from leftmost 32 bits of each 32-bit integer
+      rank   observed  expected (o-e)^2/e  sum
+        29       197     211.4   .983261     .983
+        30      5156    5134.0   .094185    1.077
+        31     23125   23103.0   .020860    1.098
+        32     11522   11551.5   .075461    1.174
+  chisquare= 1.174 for 3 d. of f.; p-value= .380012
+--------------------------------------------------------------------------------
+ b-rank test for bits  1 to  8 p=1-exp(-SUM/2)= .84075
+ b-rank test for bits  2 to  9 p=1-exp(-SUM/2)= .75900
+ b-rank test for bits  3 to 10 p=1-exp(-SUM/2)= .90036
+ b-rank test for bits  4 to 11 p=1-exp(-SUM/2)= .10264
+ b-rank test for bits  5 to 12 p=1-exp(-SUM/2)= .11152
+ b-rank test for bits  6 to 13 p=1-exp(-SUM/2)= .09149
+ b-rank test for bits  7 to 14 p=1-exp(-SUM/2)= .45939
+ b-rank test for bits  8 to 15 p=1-exp(-SUM/2)= .62530
+ b-rank test for bits  9 to 16 p=1-exp(-SUM/2)= .49788
+ b-rank test for bits 10 to 17 p=1-exp(-SUM/2)= .54241
+ b-rank test for bits 11 to 18 p=1-exp(-SUM/2)= .74242
+ b-rank test for bits 12 to 19 p=1-exp(-SUM/2)= .05889
+ b-rank test for bits 13 to 20 p=1-exp(-SUM/2)= .68449
+ b-rank test for bits 14 to 21 p=1-exp(-SUM/2)= .37622
+ b-rank test for bits 15 to 22 p=1-exp(-SUM/2)= .88170
+ b-rank test for bits 16 to 23 p=1-exp(-SUM/2)=1.00000
+ b-rank test for bits 17 to 24 p=1-exp(-SUM/2)= .99877
+ b-rank test for bits 18 to 25 p=1-exp(-SUM/2)= .49480
+ b-rank test for bits 19 to 26 p=1-exp(-SUM/2)=1.00000
+ b-rank test for bits 20 to 27 p=1-exp(-SUM/2)=1.00000
+ b-rank test for bits 21 to 28 p=1-exp(-SUM/2)=1.00000
+ b-rank test for bits 22 to 29 p=1-exp(-SUM/2)= .99993
+ b-rank test for bits 23 to 30 p=1-exp(-SUM/2)=1.00000
+ b-rank test for bits 24 to 31 p=1-exp(-SUM/2)=1.00000
+ b-rank test for bits 25 to 32 p=1-exp(-SUM/2)=1.00000
+   TEST SUMMARY, 25 tests on 100,000 random 6x8 matrices
+ These should be 25 uniform [0,1] random variables:
+     .840747     .758995     .900358     .102641     .111523
+     .091492     .459386     .625296     .497884     .542409
+     .742416     .058890     .684493     .376224     .881702
+     .999999     .998775     .494798    1.000000    1.000000
+    1.000000     .999926    1.000000    1.000000    1.000000
+   brank test summary for CONG.32        
+       The KS test for those 25 supposed UNI's yields
+                    KS p-value=1.000000
+--------------------------------------------------------------------------------
+  No. missing words should average  141909. with sigma=428.
+ tst no  1:  140419 missing words,   -3.48 sigmas from mean, p-value= .00025
+ tst no  2:  139963 missing words,   -4.55 sigmas from mean, p-value= .00000
+ tst no  3:  139473 missing words,   -5.69 sigmas from mean, p-value= .00000
+ tst no  4:  139965 missing words,   -4.54 sigmas from mean, p-value= .00000
+ tst no  5:  140277 missing words,   -3.81 sigmas from mean, p-value= .00007
+ tst no  6:  139385 missing words,   -5.90 sigmas from mean, p-value= .00000
+ tst no  7:  140714 missing words,   -2.79 sigmas from mean, p-value= .00261
+ tst no  8:  140043 missing words,   -4.36 sigmas from mean, p-value= .00001
+ tst no  9:  139979 missing words,   -4.51 sigmas from mean, p-value= .00000
+ tst no 10:  139943 missing words,   -4.59 sigmas from mean, p-value= .00000
+ tst no 11:  139711 missing words,   -5.14 sigmas from mean, p-value= .00000
+ tst no 12:  140307 missing words,   -3.74 sigmas from mean, p-value= .00009
+ tst no 13:  139407 missing words,   -5.85 sigmas from mean, p-value= .00000
+ tst no 14:  139421 missing words,   -5.81 sigmas from mean, p-value= .00000
+ tst no 15:  139697 missing words,   -5.17 sigmas from mean, p-value= .00000
+ tst no 16:  139668 missing words,   -5.24 sigmas from mean, p-value= .00000
+ tst no 17:  139596 missing words,   -5.40 sigmas from mean, p-value= .00000
+ tst no 18:  139692 missing words,   -5.18 sigmas from mean, p-value= .00000
+ tst no 19:  139517 missing words,   -5.59 sigmas from mean, p-value= .00000
+ tst no 20:  140063 missing words,   -4.31 sigmas from mean, p-value= .00001
+--------------------------------------------------------------------------------
+    OPSO for CONG.32         using bits 23 to 32       1047552******* 1.0000
+    OPSO for CONG.32         using bits 22 to 31       1046528******* 1.0000
+    OPSO for CONG.32         using bits 21 to 30       1044480******* 1.0000
+    OPSO for CONG.32         using bits 20 to 29       1040384******* 1.0000
+    OPSO for CONG.32         using bits 19 to 28       1032192******* 1.0000
+    OPSO for CONG.32         using bits 18 to 27       1015808******* 1.0000
+    OPSO for CONG.32         using bits 17 to 26        983040******* 1.0000
+    OPSO for CONG.32         using bits 16 to 25        917504******* 1.0000
+    OPSO for CONG.32         using bits 15 to 24        804864******* 1.0000
+    OPSO for CONG.32         using bits 14 to 23        746496******* 1.0000
+    OPSO for CONG.32         using bits 13 to 22        715776******* 1.0000
+    OPSO for CONG.32         using bits 12 to 21        385024838.326 1.0000
+    OPSO for CONG.32         using bits 11 to 20         81980*******  .0000
+    OPSO for CONG.32         using bits 10 to 19        107799*******  .0000
+    OPSO for CONG.32         using bits  9 to 18        125502-56.577  .0000
+    OPSO for CONG.32         using bits  8 to 17        133212-29.991  .0000
+    OPSO for CONG.32         using bits  7 to 16        137278-15.970  .0000
+    OPSO for CONG.32         using bits  6 to 15        139654 -7.777  .0000
+    OPSO for CONG.32         using bits  5 to 14        140596 -4.529  .0000
+    OPSO for CONG.32         using bits  4 to 13        141361 -1.891  .0293
+    OPSO for CONG.32         using bits  3 to 12        141754  -.536  .2961
+    OPSO for CONG.32         using bits  2 to 11        141723  -.643  .2603
+    OPSO for CONG.32         using bits  1 to 10        141814  -.329  .3712
+    OQSO for CONG.32         using bits 28 to 32       1048544******* 1.0000
+    OQSO for CONG.32         using bits 27 to 31       1048512******* 1.0000
+    OQSO for CONG.32         using bits 26 to 30       1048448******* 1.0000
+    OQSO for CONG.32         using bits 25 to 29       1048320******* 1.0000
+    OQSO for CONG.32         using bits 24 to 28       1048064******* 1.0000
+    OQSO for CONG.32         using bits 23 to 27       1047552******* 1.0000
+    OQSO for CONG.32         using bits 22 to 26       1046528******* 1.0000
+    OQSO for CONG.32         using bits 21 to 25       1044480******* 1.0000
+    OQSO for CONG.32         using bits 20 to 24       1040384******* 1.0000
+    OQSO for CONG.32         using bits 19 to 23       1032192******* 1.0000
+    OQSO for CONG.32         using bits 18 to 22       1015808******* 1.0000
+    OQSO for CONG.32         using bits 17 to 21        983040******* 1.0000
+    OQSO for CONG.32         using bits 16 to 20        917664******* 1.0000
+    OQSO for CONG.32         using bits 15 to 19        799200******* 1.0000
+    OQSO for CONG.32         using bits 14 to 18        699712******* 1.0000
+    OQSO for CONG.32         using bits 13 to 17        440640******* 1.0000
+    OQSO for CONG.32         using bits 12 to 16        353152716.077 1.0000
+    OQSO for CONG.32         using bits 11 to 15        109939*******  .0000
+    OQSO for CONG.32         using bits 10 to 14        132290-32.608  .0000
+    OQSO for CONG.32         using bits  9 to 13        147476 18.870 1.0000
+    OQSO for CONG.32         using bits  8 to 12        139064 -9.645  .0000
+    OQSO for CONG.32         using bits  7 to 11        137628-14.513  .0000
+    OQSO for CONG.32         using bits  6 to 10        140486 -4.825  .0000
+    OQSO for CONG.32         using bits  5 to  9        140550 -4.608  .0000
+    OQSO for CONG.32         using bits  4 to  8        141100 -2.743  .0030
+    OQSO for CONG.32         using bits  3 to  7        141846  -.215  .4150
+    OQSO for CONG.32         using bits  2 to  6        141618  -.988  .1617
+    OQSO for CONG.32         using bits  1 to  5        141302 -2.059  .0198
+     DNA for CONG.32         using bits 31 to 32       1048572******* 1.0000
+     DNA for CONG.32         using bits 30 to 31       1048568******* 1.0000
+     DNA for CONG.32         using bits 29 to 30       1048560******* 1.0000
+     DNA for CONG.32         using bits 28 to 29       1048544******* 1.0000
+     DNA for CONG.32         using bits 27 to 28       1048512******* 1.0000
+     DNA for CONG.32         using bits 26 to 27       1048448******* 1.0000
+     DNA for CONG.32         using bits 25 to 26       1048320******* 1.0000
+     DNA for CONG.32         using bits 24 to 25       1048064******* 1.0000
+     DNA for CONG.32         using bits 23 to 24       1047552******* 1.0000
+     DNA for CONG.32         using bits 22 to 23       1046528******* 1.0000
+     DNA for CONG.32         using bits 21 to 22       1044488******* 1.0000
+     DNA for CONG.32         using bits 20 to 21       1040400******* 1.0000
+     DNA for CONG.32         using bits 19 to 20       1032216******* 1.0000
+     DNA for CONG.32         using bits 18 to 19       1016040******* 1.0000
+     DNA for CONG.32         using bits 17 to 18        984684******* 1.0000
+     DNA for CONG.32         using bits 16 to 17        924428******* 1.0000
+     DNA for CONG.32         using bits 15 to 16        807840******* 1.0000
+     DNA for CONG.32         using bits 14 to 15        651008******* 1.0000
+     DNA for CONG.32         using bits 13 to 14        400968764.185 1.0000
+     DNA for CONG.32         using bits 12 to 13        160212 53.990 1.0000
+     DNA for CONG.32         using bits 11 to 12        179437110.701 1.0000
+     DNA for CONG.32         using bits 10 to 11        143158  3.683  .9999
+     DNA for CONG.32         using bits  9 to 10        150550 25.489 1.0000
+     DNA for CONG.32         using bits  8 to  9        141165 -2.196  .0141
+     DNA for CONG.32         using bits  7 to  8        142247   .996  .8404
+     DNA for CONG.32         using bits  6 to  7        142328  1.235  .8916
+     DNA for CONG.32         using bits  5 to  6        141088 -2.423  .0077
+     DNA for CONG.32         using bits  4 to  5        142178   .793  .7860
+     DNA for CONG.32         using bits  3 to  4        142195   .843  .8003
+     DNA for CONG.32         using bits  2 to  3        141910   .002  .5008
+     DNA for CONG.32         using bits  1 to  2        142169   .766  .7782
+--------------------------------------------------------------------------------
+   Test results for CONG.32        
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size:2560000
+                               chisquare  equiv normal  p-value
+  Results fo COUNT-THE-1's in successive bytes:
+ byte stream for CONG.32         16223.27    194.076     1.000000
+ byte stream for CONG.32         16237.41    194.276     1.000000
+--------------------------------------------------------------------------------
+ Chi-square with 5^5-5^4=2500 d.of f. for sample size: 256000
+                      chisquare  equiv normal  p value
+  Results for COUNT-THE-1's in specified bytes:
+           bits  1 to  8  2533.57       .475      .682528
+           bits  2 to  9  2517.05       .241      .595293
+           bits  3 to 10  2609.87      1.554      .939879
+           bits  4 to 11  2512.52       .177      .570279
+           bits  5 to 12  2622.07      1.726      .957853
+           bits  6 to 13  2549.18       .695      .756626
+           bits  7 to 14  2578.15      1.105      .865455
+           bits  8 to 15  2482.92      -.242      .404543
+           bits  9 to 16  2492.12      -.111      .455660
+           bits 10 to 17  2509.62       .136      .554106
+           bits 11 to 18  2508.47       .120      .547664
+           bits 12 to 19  2494.62      -.076      .469657
+           bits 13 to 20  2353.24     -2.076      .018968
+           bits 14 to 21  2440.14      -.847      .198633
+           bits 15 to 22  2378.55     -1.718      .042942
+           bits 16 to 23  4635.29     30.198     1.000000
+           bits 17 to 24  9403.05     97.624     1.000000
+           bits 18 to 25 19111.98    234.929     1.000000
+           bits 19 to 26 37074.83    488.962     1.000000
+           bits 20 to 27 79608.29   1090.476     1.000000
+           bits 21 to 28152876.60   2126.646     1.000000
+           bits 22 to 29321848.40   4516.269     1.000000
+           bits 23 to 30619770.40   8729.522     1.000000
+           bits 24 to 31*********  17445.590     1.000000
+           bits 25 to 32*********  34473.980     1.000000
+--------------------------------------------------------------------------------
+           CDPARK: result of ten tests on file CONG.32        
+            Of 12,000 tries, the average no. of successes
+                 should be 3523 with sigma=21.9
+            Successes: 3524    z-score:   .046 p-value: .518210
+            Successes: 3542    z-score:   .868 p-value: .807188
+            Successes: 3540    z-score:   .776 p-value: .781201
+            Successes: 3502    z-score:  -.959 p-value: .168804
+            Successes: 3532    z-score:   .411 p-value: .659449
+            Successes: 3515    z-score:  -.365 p-value: .357445
+            Successes: 3520    z-score:  -.137 p-value: .445521
+            Successes: 3485    z-score: -1.735 p-value: .041356
+            Successes: 3537    z-score:   .639 p-value: .738676
+            Successes: 3491    z-score: -1.461 p-value: .071982
+ 
+           square size   avg. no.  parked   sample sigma
+             100.            3518.800       19.312
+            KSTEST for the above 10: p=  .153012
+--------------------------------------------------------------------------------
+               This is the MINIMUM DISTANCE test
+              for random integers in the file CONG.32        
+     Sample no.    d^2     avg     equiv uni            
+           5     .2537    .6019     .225044
+          10     .7954   1.1717     .550397
+          15    1.1275   1.1869     .677984
+          20     .3553   1.0174     .300267
+          25     .3976    .9736     .329430
+          30     .0230    .9402     .022829
+          35     .3894    .9304     .323831
+          40    1.4460    .9024     .766200
+          45     .1374    .9086     .128986
+          50     .3680    .8882     .309160
+          55     .4935    .8814     .391054
+          60     .3680    .9421     .309160
+          65     .0917    .8890     .088057
+          70     .8237    .8849     .563004
+          75     .8486    .8690     .573812
+          80     .5335    .9093     .415035
+          85     .6217    .8838     .464651
+          90    2.7552    .9059     .937277
+          95    3.6852    .9313     .975369
+         100     .1035    .9286     .098830
+     MINIMUM DISTANCE TEST for CONG.32        
+          Result of KS test on 20 transformed mindist^2's:
+                                  p-value= .683060
+--------------------------------------------------------------------------------
+               The 3DSPHERES test for file CONG.32        
+ sample no:  1     r^3=  40.642     p-value= .74198
+ sample no:  2     r^3=  35.284     p-value= .69153
+ sample no:  3     r^3=  46.976     p-value= .79109
+ sample no:  4     r^3=   3.277     p-value= .10349
+ sample no:  5     r^3=   1.231     p-value= .04020
+ sample no:  6     r^3=  19.270     p-value= .47393
+ sample no:  7     r^3=  27.341     p-value= .59803
+ sample no:  8     r^3=  19.237     p-value= .47336
+ sample no:  9     r^3= 166.976     p-value= .99617
+ sample no: 10     r^3=  18.581     p-value= .46171
+ sample no: 11     r^3=  19.344     p-value= .47523
+ sample no: 12     r^3=  50.112     p-value= .81183
+ sample no: 13     r^3=  24.141     p-value= .55278
+ sample no: 14     r^3=  21.505     p-value= .51170
+ sample no: 15     r^3=  22.352     p-value= .52530
+ sample no: 16     r^3=    .836     p-value= .02748
+ sample no: 17     r^3=  39.279     p-value= .72999
+ sample no: 18     r^3= 102.527     p-value= .96721
+ sample no: 19     r^3=  20.746     p-value= .49920
+ sample no: 20     r^3=  17.400     p-value= .44011
+       3DSPHERES test for file CONG.32              p-value= .690794
+--------------------------------------------------------------------------------
+            RESULTS OF SQUEEZE TEST FOR CONG.32        
+         Table of standardized frequency counts
+     ( (obs-exp)/sqrt(exp) )^2
+        for j taking values <=6,7,8,...,47,>=48:
+      .6     -.3     2.5    -1.6     -.5     -.2
+      .4      .7     -.5      .0    -1.0     -.6
+      .1      .6     2.3     -.9      .5     -.8
+     -.7      .2    -1.4     -.6      .8     -.6
+     1.3      .8      .2      .1     -.3     -.8
+      .5     1.7      .0      .4     1.0    -1.2
+     2.1     1.1     1.3    -1.8     -.6     1.0
+      .8
+           Chi-square with 42 degrees of freedom: 44.929
+              z-score=   .320  p-value= .649941
+______________________________________________________________
+--------------------------------------------------------------------------------
+                Test no.  1      p-value  .534111
+                Test no.  2      p-value  .446474
+                Test no.  3      p-value  .168329
+                Test no.  4      p-value  .567817
+                Test no.  5      p-value  .599703
+                Test no.  6      p-value  .307916
+                Test no.  7      p-value  .736003
+                Test no.  8      p-value  .389519
+                Test no.  9      p-value  .682195
+                Test no. 10      p-value  .070525
+   Results of the OSUM test for CONG.32        
+        KSTEST on the above 10 p-values:  .445890
+--------------------------------------------------------------------------------
+           The RUNS test for file CONG.32        
+     Up and down runs in a sample of 10000
+_________________________________________________ 
+                 Run test for CONG.32        :
+       runs up; ks test for 10 p's: .394058
+     runs down; ks test for 10 p's: .818483
+                 Run test for CONG.32        :
+       runs up; ks test for 10 p's: .738589
+     runs down; ks test for 10 p's: .846087
+--------------------------------------------------------------------------------
+                Results of craps test for CONG.32        
+  No. of wins:  Observed Expected
+                                98583    98585.86
+ Chisq=  22.35 for 20 degrees of freedom, p=  .67805
+               Throws Observed Expected  Chisq     Sum
+            SUMMARY  FOR CONG.32        
+                p-value for no. of wins: .494898
+                p-value for throws/game: .678054
+  Test completed.  File CONG.32        
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
